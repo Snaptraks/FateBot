@@ -17,6 +17,32 @@ class EventESO(commands.Cog):
         self.bot = bot
 
         self._create_tables.start()
+        self.reload_menus.start()
+
+    @tasks.loop(count=1)
+    async def reload_menus(self):
+        """Reload the menus upon startup."""
+
+        events = await self._get_events()
+
+        for event in events:
+            channel = (self.bot.get_channel(event['channel_id'])
+                       or await self.bot.fetch_channel(event['channel_id']))
+            message = await channel.fetch_message(event['message_id'])
+            ctx = await self.bot.get_context(message)
+
+            menu = menus.RegistrationMenu(
+                timeout=None,
+                activation_time=event['activation_time'],
+                event_id=event['rowid'],
+                message=message,
+            )
+
+            await menu.start(ctx)
+
+    @reload_menus.before_loop
+    async def reload_menus_before(self):
+        await self.bot.wait_until_ready()
 
     @commands.command()
     async def trial(self, ctx, *, activation_time: DateTimeISO = None):
@@ -68,3 +94,20 @@ class EventESO(commands.Cog):
         )
 
         await self.bot.db.commit()
+
+    async def _get_events(self):
+        """Return the list of events that are still active."""
+
+        async with self.bot.db.execute(
+                """
+                SELECT rowid, *
+                  FROM eventeso_event
+                 WHERE activation_time > :now
+                """,
+                {
+                    'now': datetime.utcnow()
+                }
+        ) as c:
+            rows = await c.fetchall()
+
+        return rows
