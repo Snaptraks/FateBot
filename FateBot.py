@@ -16,4 +16,4 @@ if __name__ == '__main__':
         intents=intents,
     )
 
-    bot.run(token=config.token)
+    bot.run(config.token)
