@@ -49,7 +49,8 @@ class EventESO(commands.Cog):
                 activation_time TIMESTAMP NOT NULL,
                 channel_id      INTEGER   NOT NULL,
                 creation_time   TIMESTAMP NOT NULL,
-                message_id      INTEGER   NOT NULL
+                message_id      INTEGER   NOT NULL,
+                type            INTEGER   NOT NULL
             )
             """
         )
@@ -57,9 +58,9 @@ class EventESO(commands.Cog):
         await self.bot.db.execute(
             """
             CREATE TABLE IF NOT EXISTS eventeso_participant(
-                user_id  INTEGER NOT NULL,
-                role     TEXT    NOT NULL,
                 event_id INTEGER NOT NULL,
+                role     TEXT    NOT NULL,
+                user_id  INTEGER NOT NULL,
                 FOREIGN KEY (event_id)
                     REFERENCES eventeso_event (rowid)
             )
