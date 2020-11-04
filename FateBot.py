@@ -20,7 +20,7 @@ class FateBot(commands.Bot):
         # Create the DB connection and allow for name-based
         # access of data columns
         self.db = self.loop.run_until_complete(
-            create_db_connection(kwargs.get('db_name', ':memory')))
+            create_db_connection(kwargs.get('db_name', ':memory:')))
         self.db.row_factory = aiosqlite.Row
 
     async def close(self):
