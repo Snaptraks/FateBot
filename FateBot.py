@@ -11,7 +11,7 @@ class FateBot(commands.Bot):
 if __name__ == '__main__':
     intents = discord.Intents.all()
     bot = FateBot(
-        description="Bot for the Fate Bound EOS Guild.",
+        description="Bot for the Fate Bound ESO Guild.",
         command_prefix="&",
         intents=intents,
     )
