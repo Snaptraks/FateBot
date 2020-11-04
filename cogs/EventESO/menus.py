@@ -14,6 +14,7 @@ class RegistrationMenu(menus.Menu):
     def __init__(self, *args, **kwargs):
         self.activation_time = kwargs.pop('activation_time')
         self.event_id = kwargs.pop('event_id', None)
+        self.participants = []
         super().__init__(*args, **kwargs)
 
     async def send_initial_message(self, ctx, channel):
@@ -33,6 +34,10 @@ class RegistrationMenu(menus.Menu):
             return False
 
         return payload.emoji in self.buttons
+
+    async def stop(self):
+        await self._get_participants()
+        super().stop()
 
     @menus.button(BUTTONS[0])
     async def on_dps(self, payload):
@@ -102,6 +107,8 @@ class RegistrationMenu(menus.Menu):
                 }
         ) as c:
             rows = await c.fetchall()
+
+        self.participants = [row['user_id'] for row in rows]
 
         return rows
 

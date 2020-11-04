@@ -73,6 +73,17 @@ class EventESO(commands.Cog):
         event_id = menu.event_id
         self.running_events[event_id] = menu
 
+        await discord.utils.sleep_until(menu.activation_time)
+        await menu.stop()
+
+        users = []
+        for user_id in menu.participants:
+            user = (self.bot.get_user(user_id)
+                    or await self.bot.fetch_user(user_id))
+            users.append(user.mention)
+
+        await ctx.send(f"Trial Time {' '.join(users)}")
+
     @tasks.loop(count=1)
     async def _create_tables(self):
         """Create the necessary DB tables if they do not exist."""
