@@ -12,6 +12,7 @@ class FateBot(commands.Bot):
         oauth_url = discord.utils.oauth_url(
             self.user.id, permissions=permissions)
         print(
+            "--------\n"
             f"Logged in as {self.user.name} (ID:{self.user.id}) "
             f"Use this link to invite {self.user.name}:\n"
             f"{oauth_url}\n"
