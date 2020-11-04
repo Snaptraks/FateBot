@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from dateutil.parser import isoparse
+import discord
 from discord.ext import commands, tasks
 from . import menus
 
@@ -15,6 +16,7 @@ class DateTimeISO(commands.Converter):
 class EventESO(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        self.running_events = {}
 
         self._create_tables.start()
         self.reload_menus.start()
@@ -31,14 +33,13 @@ class EventESO(commands.Cog):
             message = await channel.fetch_message(event['message_id'])
             ctx = await self.bot.get_context(message)
 
-            menu = menus.RegistrationMenu(
+            self.bot.loop.create_task(self._registration_task(
+                ctx,
                 timeout=None,
                 activation_time=event['activation_time'],
                 event_id=event['rowid'],
                 message=message,
-            )
-
-            await menu.start(ctx)
+            ))
 
     @reload_menus.before_loop
     async def reload_menus_before(self):
@@ -51,12 +52,11 @@ class EventESO(commands.Cog):
         if activation_time is None:
             activation_time = datetime.utcnow() + timedelta(hours=1)
 
-        menu = menus.RegistrationMenu(
+        await self._registration_task(
+            ctx,
             timeout=None,
             activation_time=activation_time,
         )
-
-        await menu.start(ctx)
 
     @trial.error
     async def trial_error(self, ctx, error):
@@ -64,6 +64,14 @@ class EventESO(commands.Cog):
 
         if isinstance(error, commands.ConversionError):
             await ctx.send("Wrong time format. Are you sure it is ISO?")
+
+    async def _registration_task(self, ctx, **kwargs):
+        """Task helper to start the registration menus and timer."""
+
+        menu = menus.RegistrationMenu(**kwargs)
+        await menu.start(ctx)
+        event_id = menu.event_id
+        self.running_events[event_id] = menu
 
     @tasks.loop(count=1)
     async def _create_tables(self):
