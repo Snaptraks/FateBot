@@ -28,4 +28,11 @@ if __name__ == '__main__':
         intents=intents,
     )
 
+    startup_extensions = [
+        'cogs.EventESO',
+    ]
+
+    for extension in startup_extensions:
+        bot.load_extension(extension)
+
     bot.run(config.token)
