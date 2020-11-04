@@ -140,3 +140,4 @@ cython_debug/
 # Config and Data files
 config.py
 *.db
+*.db-journal
