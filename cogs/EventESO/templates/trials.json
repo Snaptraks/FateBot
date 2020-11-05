@@ -1,0 +1,34 @@
+{
+    "Maw of Lorkhaj": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 5
+        },
+        "dps1": {
+            "name": "Mech. DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1":{
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial of Maw of Lorkhaj",
+        "description": "DESCRIPTION HERE",
+        "url": "https://elderscrollsonline.wiki.fextralife.com/Maw+of+Lorkhaj",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/maw-of-lorkhaj_small.jpg",
+        "guides": "GUIDES HERE",
+        "requirements": "REQUIREMENTS HERE"
+    }
+}
