@@ -1,11 +1,16 @@
 from discord.ext import menus
 
 
-BUTTONS = [
-    "\u2694",  # :crossed_swords:
-    "\U0001f6e1",  # :shield:
-    "\u274c",  # :x:
-]
+BUTTONS = {
+    "leader": "\U0001f451",  # :crown:
+    "dps0": "\U0001f5e1\ufe0f",  # :dagger:
+    "dps1": "\u2694\ufe0f",  # :crossed_swords:
+    "tank0": "\U0001f6e1\ufe0f",  # :shield:
+    "tank1": "\U0001f9a7",  # :orangutan:
+    "healer0": "\U0001f9d1\u200d\u2695\ufe0f",  # :health_worker:
+    "healer1": "\u2695\ufe0f",  # :medical_symbol:
+    "cancel": "\u274c",  # :x:
+}
 
 
 class RegistrationMenu(menus.Menu):
@@ -39,23 +44,31 @@ class RegistrationMenu(menus.Menu):
         await self._get_participants()
         super().stop()
 
-    @menus.button(BUTTONS[0])
-    async def on_dps(self, payload):
+    @menus.button(BUTTONS["dps0"])
+    async def on_dps0(self, payload):
         """Register as DPS on the Event."""
 
         await self._remove_participant(payload.user_id)
-        await self._add_participant(payload.user_id, "dps")
+        await self._add_participant(payload.user_id, "dps0")
         await self.update_page()
 
-    @menus.button(BUTTONS[1])
-    async def on_tank(self, payload):
+    @menus.button(BUTTONS["healer0"])
+    async def on_healer0(self, payload):
+        """Register a Healer on the Event."""
+
+        await self._remove_participant(payload.user_id)
+        await self._add_participant(payload.user_id, "healer0")
+        await self.update_page()
+
+    @menus.button(BUTTONS["tank0"])
+    async def on_tank0(self, payload):
         """Register as Tank on the Event."""
 
         await self._remove_participant(payload.user_id)
-        await self._add_participant(payload.user_id, "tank")
+        await self._add_participant(payload.user_id, "tank0")
         await self.update_page()
 
-    @menus.button(BUTTONS[-1])
+    @menus.button(BUTTONS["cancel"])
     async def on_cancel(self, payload):
         """Remove yourself from the event."""
 
