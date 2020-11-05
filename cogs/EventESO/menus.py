@@ -48,31 +48,32 @@ class RegistrationMenu(menus.Menu):
     async def on_dps0(self, payload):
         """Register as DPS on the Event."""
 
-        await self._remove_participant(payload.user_id)
-        await self._add_participant(payload.user_id, "dps0")
-        await self.update_page()
+        await self._button_add_role(payload, "dps0")
 
     @menus.button(BUTTONS["healer0"])
     async def on_healer0(self, payload):
         """Register a Healer on the Event."""
 
-        await self._remove_participant(payload.user_id)
-        await self._add_participant(payload.user_id, "healer0")
-        await self.update_page()
+        await self._button_add_role(payload, "healer0")
 
     @menus.button(BUTTONS["tank0"])
     async def on_tank0(self, payload):
         """Register as Tank on the Event."""
 
-        await self._remove_participant(payload.user_id)
-        await self._add_participant(payload.user_id, "tank0")
-        await self.update_page()
+        await self._button_add_role(payload, "tank0")
 
     @menus.button(BUTTONS["cancel"])
     async def on_cancel(self, payload):
         """Remove yourself from the event."""
 
         await self._remove_participant(payload.user_id)
+        await self.update_page()
+
+    async def _button_add_role(self, payload, role):
+        """Helper function to add the user to a role."""
+
+        await self._remove_participant(payload.user_id)
+        await self._add_participant(payload.user_id, role)
         await self.update_page()
 
     async def update_page(self):
