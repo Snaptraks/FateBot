@@ -65,6 +65,9 @@ class EventESO(commands.Cog):
         if isinstance(error, commands.ConversionError):
             await ctx.send("Wrong time format. Are you sure it is ISO?")
 
+        else:
+            raise error
+
     async def _registration_task(self, ctx, **kwargs):
         """Task helper to start the registration menus and timer."""
 
