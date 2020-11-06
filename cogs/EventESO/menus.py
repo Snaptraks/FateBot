@@ -114,6 +114,11 @@ class RegistrationMenu(menus.Menu):
     async def on_leader(self, payload):
         """Add the Leader role to the user."""
 
+        participants = await self._get_participants()
+        role_list = self._classify_roles(participants)
+        if len(role_list["leader"]) == 1:
+            return
+
         await self._add_event_role(payload.user_id, "leader")
         await self.update_page()
 
