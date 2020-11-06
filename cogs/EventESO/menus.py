@@ -1,3 +1,4 @@
+from collections import defaultdict
 import itertools
 import json
 import os
@@ -62,8 +63,12 @@ class RegistrationMenu(menus.Menu):
     async def send_initial_message(self, ctx, channel):
         """Send the initial, empty Embed for the registration."""
 
-        self.message = await channel.send("Here is the event!")
-        await self._create_event(self.activation_time)
+        self.message = await channel.send("Getting things ready...")
+        self.event_id = await self._create_event(self.activation_time)
+        self.event_data = await self._get_event_data()
+        participants = await self._get_participants()
+        self.embed = self.build_embed(participants)
+        await self.message.edit(content=None, embed=self.embed)
         return self.message
 
     def reaction_check(self, payload):
@@ -98,7 +103,7 @@ class RegistrationMenu(menus.Menu):
         return check
 
     async def add_role(self, payload):
-        """docstring"""
+        """Add the role to the user for the present event."""
         await self._button_add_role(
             payload, REVERSE_BUTTONS[payload.emoji.name])
 
@@ -131,12 +136,69 @@ class RegistrationMenu(menus.Menu):
         await self.update_page()
 
     async def update_page(self):
-        rows = await self._get_participants()
-        participants = [str(dict(row)) for row in rows]
-        participants_str = '\n'.join(participants)
+        """Rebuild the embed with the new data."""
 
-        await self.message.edit(
-            content=f"Here is the event!\n{participants_str}")
+        participants = await self._get_participants()
+        embed = self.build_embed(participants)
+        await self.message.edit(content=None, embed=embed)
+
+    def build_embed(self, participants=None):
+        """Build the required Embed for the requested event."""
+
+        role_list = self._classify_roles(participants)
+
+        embed = discord.Embed(
+            title=self.template['title'],
+            description=self.template['description'],
+            url=self.template['url'],
+            color=0x200972,
+            timestamp=self.activation_time,
+        ).set_author(
+            name=self.bot.user.name,
+            icon_url=self.bot.user.avatar_url,
+        ).set_image(
+            url=self.template['image'],
+        ).set_footer(
+            text=f"Event ID {self.event_id}",
+        ).add_field(
+            name="Guides",
+            value=self.template['guides'],
+        ).add_field(
+            name="Requirements",
+            value=self.template['requirements'],
+        ).add_field(
+            name="Leader",
+            value=f"<@{role_list['leader'][0]}>"
+                  if role_list['leader'] else None,
+            inline=False,
+        )
+
+        for role in ALL_ROLES:
+            if not self._skip_role(role)(self):
+                field_name = (
+                    f"{BUTTONS[role]} "
+                    f"{self.template[role]['name']} "
+                    f"({len(role_list[role])}/{self.template[role]['amount']})"
+                )
+                field_value = '\n'.join(
+                    [f"<@{user_id}>" for user_id in role_list[role]])
+
+                embed.add_field(
+                    name=field_name,
+                    value=field_value if field_value else None,
+                )
+
+        return embed
+
+    def _classify_roles(self, participants):
+        """Counts the number of participants in the roles of the event."""
+
+        role_list = defaultdict(lambda: [])
+        for user in participants:
+            # classify users in roles
+            role_list[user['role']].append(user['user_id'])
+
+        return role_list
 
     async def _create_event(self, activation_time):
         """Insert the Event data in the DB."""
@@ -177,7 +239,6 @@ class RegistrationMenu(menus.Menu):
                 }
         ) as c:
             row = await c.fetchone()
-            print(row)
 
         return row
 
