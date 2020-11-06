@@ -162,7 +162,7 @@ class RegistrationMenu(menus.Menu):
         ).set_image(
             url=self.template['image'],
         ).set_footer(
-            text=f"Event ID {self.event_id}",
+            text=f"Event ID {self.event_id} | Happening on ",
         ).add_field(
             name="Guides",
             value=self.template['guides'],
@@ -170,7 +170,7 @@ class RegistrationMenu(menus.Menu):
             name="Requirements",
             value=self.template['requirements'],
         ).add_field(
-            name="Leader",
+            name=f"{BUTTONS['leader']} Leader",
             value=f"<@{role_list['leader'][0]}>"
                   if role_list['leader'] else None,
             inline=False,
