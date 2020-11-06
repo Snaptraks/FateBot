@@ -55,7 +55,7 @@ class RegistrationMenu(menus.Menu):
         for role in ALL_ROLES:
             button = menus.Button(
                 BUTTONS[role],
-                self.add_role,
+                self._button_add_role,
                 skip_if=self._skip_role(role)
             )
             self.add_button(button)
@@ -102,11 +102,6 @@ class RegistrationMenu(menus.Menu):
             return menu.template[role]['amount'] == 0
         return check
 
-    async def add_role(self, payload):
-        """Add the role to the user for the present event."""
-        await self._button_add_role(
-            payload, REVERSE_BUTTONS[payload.emoji.name])
-
     # better way than write all the functions?
     # @menus.button(BUTTONS["dps0"], skip_if=_skip_role("dps0"))
     # async def on_dps0(self, payload):
@@ -128,11 +123,11 @@ class RegistrationMenu(menus.Menu):
         await self._clear_participant(payload.user_id)
         await self.update_page()
 
-    async def _button_add_role(self, payload, role):
+    async def _button_add_role(self, payload):
         """Helper function to add the user to a role."""
 
         await self._remove_event_role(payload.user_id)
-        await self._add_event_role(payload.user_id, role)
+        await self._add_event_role(payload.user_id, react_role)
         await self.update_page()
 
     async def update_page(self):
