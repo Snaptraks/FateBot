@@ -18,6 +18,7 @@ BUTTONS = {
     "tank0": "\U0001f6e1\ufe0f",  # :shield:
     "tank1": "\U0001f9a7",  # :orangutan:
     "leader": "\U0001f451",  # :crown:
+    "fill": "\U0001f4ad",  # :thought_balloon:
     "clear": "\u274c",  # :x:
 }
 REVERSE_BUTTONS = {v: k for k, v in BUTTONS.items()}
@@ -126,6 +127,13 @@ class RegistrationMenu(menus.Menu):
     async def _button_add_role(self, payload):
         """Helper function to add the user to a role."""
 
+        participants = await self._get_participants()
+        role_list = self._classify_roles(participants)
+        react_role = REVERSE_BUTTONS[payload.emoji.name]
+
+        if len(role_list[react_role]) >= self.template[react_role]['amount']:
+            react_role = "fill"
+
         await self._remove_event_role(payload.user_id)
         await self._add_event_role(payload.user_id, react_role)
         await self.update_page()
@@ -182,6 +190,15 @@ class RegistrationMenu(menus.Menu):
                     name=field_name,
                     value=field_value if field_value else None,
                 )
+
+        fill_field_value = '\n'.join(
+            [f"<@{user_id}>" for user_id in role_list['fill']])
+
+        embed.add_field(
+            name=f"{BUTTONS['fill']} Fill",
+            value=fill_field_value if fill_field_value else None,
+            inline=False,
+        )
 
         return embed
 
