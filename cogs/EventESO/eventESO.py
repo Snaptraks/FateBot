@@ -110,7 +110,8 @@ class EventESO(commands.Cog):
                 role     TEXT    NOT NULL,
                 user_id  INTEGER NOT NULL,
                 FOREIGN KEY (event_id)
-                    REFERENCES eventeso_event (rowid)
+                    REFERENCES eventeso_event (rowid),
+                UNIQUE(event_id, role, user_id)
             )
             """
         )
