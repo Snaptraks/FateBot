@@ -1,37 +1,4 @@
 {
-  "nHRC": {
-      "dps0": {
-          "name": "Down DPS",
-          "amount": 4
-      },
-      "dps1": {
-          "name": "Up DPS",
-          "amount": 4
-      },
-      "healer0": {
-          "name": "Down Heal",
-          "amount": 1
-      },
-      "healer1": {
-          "name": "Up Heal",
-          "amount": 1
-      },
-      "tank0": {
-          "name": "Main Tank",
-          "amount": 1
-      },
-      "tank1": {
-          "name": "Off-tank",
-          "amount": 1
-      },
-      "title": "Trial, normal Hel Ra Citadel",
-      "description": "Main tank goes downstairs\nOff-tank goes upstairs. It is more of a tanky DPS with a taunt for the boss upstairs.\nThe healers are split for Upstaris and Downstaris\nSame for the DPS.",
-      "url": "https://en.uesp.net/wiki/Online:Hel_Ra_Citadel",
-      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/Hel_Ra_Citadel_small.jpg",
-      "guides": "[Alcast Guide](https://alcasthq.com/hel-ra-citadel-guide-for-elder-scrolls-online/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Hel+Ra+Citadel)",
-      "requirements": "CP160"
-  },
-
   "nAA": {
       "dps0": {
           "name": "Right DPS",
@@ -62,10 +29,43 @@
           "amount": 1
       },
       "title": "Trial, normal Aetherian Archives",
-      "description": "DESCRIPTION",
+      "description": "The roles have been splited for the 2 teleports. Main and off-tank are going at the center.\nMain tank should be able to tank everything in normal.\nOff-tank is a DPS unless there is a main tank-in-training.",
       "url": "https://en.uesp.net/wiki/Online:Aetherian_Archive",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/aetherian_archive_eso_trial.jpg",
       "guides": "[Alcast Guide](https://alcasthq.com/eso-aetherian-archive-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Aetherian+Archive)",
+      "requirements": "CP160"
+  },
+
+  "nHRC": {
+      "dps0": {
+          "name": "Down DPS",
+          "amount": 4
+      },
+      "dps1": {
+          "name": "Up DPS",
+          "amount": 4
+      },
+      "healer0": {
+          "name": "Down Heal",
+          "amount": 1
+      },
+      "healer1": {
+          "name": "Up Heal",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "tank1": {
+          "name": "Off-tank",
+          "amount": 1
+      },
+      "title": "Trial, normal Hel Ra Citadel",
+      "description": "Main tank goes downstairs\nOff-tank goes upstairs. It is more of a tanky DPS with a taunt for the boss upstairs.\nThe healers are split for Upstaris and Downstaris\nSame for the DPS.",
+      "url": "https://en.uesp.net/wiki/Online:Hel_Ra_Citadel",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/Hel_Ra_Citadel_small.jpg",
+      "guides": "[Alcast Guide](https://alcasthq.com/hel-ra-citadel-guide-for-elder-scrolls-online/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Hel+Ra+Citadel)",
       "requirements": "CP160"
   },
 
