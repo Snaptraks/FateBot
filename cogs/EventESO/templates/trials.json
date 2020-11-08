@@ -1,11 +1,11 @@
 {
-    "Maw of Lorkhaj": {
+    "nMoL": {
         "dps0": {
             "name": "DPS",
             "amount": 5
         },
         "dps1": {
-            "name": "Mech. DPS",
+            "name": "Runner DPS",
             "amount": 3
         },
         "healer0": {
@@ -24,11 +24,44 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial of Maw of Lorkhaj",
-        "description": "DESCRIPTION HERE",
-        "url": "https://elderscrollsonline.wiki.fextralife.com/Maw+of+Lorkhaj",
+        "title": "Trial, normal Maw of Lorkhaj",
+        "description": "Main tank will fight the main boss at the end.\nOff-tank will keep the adds in check.\nMain and off- healers heal and buff/debuff.\nRunners go in the backyard if the group DPS is to low to burn the boss.\nDPS, if a Sun-Eater is in sight, KILL IT.",
+        "url": "https://en.uesp.net/wiki/Online:Maw_of_Lorkhaj",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/maw-of-lorkhaj_small.jpg",
-        "guides": "GUIDES HERE",
-        "requirements": "REQUIREMENTS HERE"
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-maw-of-lorkhaj-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Maw+of+Lorkhaj)",
+        "requirements": "CP160"
+    },
+
+    "nCR+0": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 5
+        },
+        "dps1": {
+            "name": "Portal DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1":{
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Cloudrest +0",
+        "description": "Main tank keeps the minis and Z'maja in check.\nOff-tank keeps the birds in check and go in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focuss on Grapes>Creepers>Z'maja",
+        "url": "https://en.uesp.net/wiki/Online:Cloudrest",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
+        "requirements": "CP160"
     }
 }
