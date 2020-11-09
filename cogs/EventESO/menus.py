@@ -116,8 +116,14 @@ class RegistrationMenu(menus.Menu):
         """Add the Leader role to the user."""
 
         participants = await self._get_participants()
+        user_ids = [user['user_id'] for user in participants]
+        if payload.user_id not in user_ids:
+            # do not let unregistered users in the Leader role
+            return
+
         role_list = self._classify_roles(participants)
         if len(role_list["leader"]) == 1:
+            # no more than one Leader
             return
 
         await self._add_event_role(payload.user_id, "leader")
