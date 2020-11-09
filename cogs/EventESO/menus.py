@@ -123,7 +123,15 @@ class RegistrationMenu(menus.Menu):
         await self._add_event_role(payload.user_id, "leader")
         await self.update_page()
 
-    @menus.button(BUTTONS["clear"], position=menus.Last(0))
+    @menus.button(BUTTONS["fill"], position=menus.Last(0))
+    async def on_fill(self, payload):
+        """Add the user to the Fill list."""
+
+        await self._clear_participant(payload.user_id)
+        await self._add_event_role(payload.user_id, "fill")
+        await self.update_page()
+
+    @menus.button(BUTTONS["clear"], position=menus.Last(1))
     async def on_clear(self, payload):
         """Remove yourself from the event."""
 
