@@ -77,10 +77,10 @@ class EventESO(commands.Cog):
         self.running_events[event_id] = menu
 
         await discord.utils.sleep_until(menu.activation_time)
-        await menu.stop()
+        participants = await menu.stop()
 
         users = []
-        for user_id in menu.participants:
+        for user_id in participants:
             user = (self.bot.get_user(user_id)
                     or await self.bot.fetch_user(user_id))
             users.append(user.mention)

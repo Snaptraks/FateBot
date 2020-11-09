@@ -39,7 +39,6 @@ class RegistrationMenu(menus.Menu):
         self.event_id = kwargs.pop('event_id', None)
         self.embed = None
         self.event_data = None
-        self.participants = []
 
         self.event_type = "trial"
         self.event_name = "Maw of Lorkhaj"
@@ -95,8 +94,10 @@ class RegistrationMenu(menus.Menu):
             self.event_data = await self._get_event_data()
 
     async def stop(self):
-        await self._get_participants()
+        participants = await self._get_participants()
+        user_ids = [user['user_id'] for user in participants]
         super().stop()
+        return user_ids
 
     def _skip_role(self, role):
         def check(menu):
@@ -272,8 +273,6 @@ class RegistrationMenu(menus.Menu):
                 }
         ) as c:
             rows = await c.fetchall()
-
-        self.participants = [row['user_id'] for row in rows]
 
         return rows
 
