@@ -142,11 +142,20 @@ class RegistrationMenu(menus.Menu):
         """Helper function to add the user to a role."""
 
         participants = await self._get_participants()
+        user_ids = [user['user_id'] for user in participants]
         role_list = self._classify_roles(participants)
         react_role = REVERSE_BUTTONS[payload.emoji.name]
+        role_max = self.template[react_role]['amount']
+        already_in_event = payload.user_id in user_ids
 
-        if len(role_list[react_role]) >= self.template[react_role]['amount']:
-            react_role = "fill"
+        if len(role_list[react_role]) >= role_max:
+            if not already_in_event:
+                react_role = "fill"
+
+            else:
+                # already in a role, the requested one is full,
+                # then do not change the user's role
+                return
 
         await self._remove_event_role(payload.user_id)
         await self._add_event_role(payload.user_id, react_role)
