@@ -25,7 +25,7 @@ REVERSE_BUTTONS = {v: k for k, v in BUTTONS.items()}
 
 BASE_DICT = {role: {"name": None, "amount": 0} for role in ALL_ROLES}
 
-trials_path = os.path.join("cogs", "EventESO",
+trials_path = os.path.join(os.path.dirname(__file__),
                            "templates", "trials.json")
 with open(trials_path) as f:
     TRIALS_DATA = json.load(f)
