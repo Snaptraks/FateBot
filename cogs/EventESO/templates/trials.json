@@ -1,11 +1,114 @@
 {
-    "Maw of Lorkhaj": {
+  "nAA": {
+      "dps0": {
+          "name": "Right DPS",
+          "amount": 3
+      },
+      "dps1": {
+          "name": "Left DPS",
+          "amount": 3
+      },
+      "dps2": {
+          "name": "Center DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Left Heal",
+          "amount": 1
+      },
+      "healer1": {
+          "name": "Right Heal",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "tank1":{
+          "name": "Off-Tank",
+          "amount": 1
+      },
+      "title": "Trial, normal Aetherian Archives",
+      "description": "The roles have been splited for the 2 teleports. Main and off-tank are going at the center.\nMain tank should be able to tank everything in normal.\nOff-tank is a DPS unless there is a main tank-in-training.",
+      "url": "https://en.uesp.net/wiki/Online:Aetherian_Archive",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/aetherian_archive_eso_trial.jpg",
+      "guides": "[Alcast Guide](https://alcasthq.com/eso-aetherian-archive-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Aetherian+Archive)",
+      "requirements": "CP160"
+  },
+
+  "nHRC": {
+      "dps0": {
+          "name": "Down DPS",
+          "amount": 4
+      },
+      "dps1": {
+          "name": "Up DPS",
+          "amount": 4
+      },
+      "healer0": {
+          "name": "Down Heal",
+          "amount": 1
+      },
+      "healer1": {
+          "name": "Up Heal",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "tank1": {
+          "name": "Off-tank",
+          "amount": 1
+      },
+      "title": "Trial, normal Hel Ra Citadel",
+      "description": "Main tank goes downstairs\nOff-tank is gonna be a DPS, **Unless the main tank is a tank-in-training**.\nThe healers are split for Upstairs and Downstairs\nSame for the DPS.",
+      "url": "https://en.uesp.net/wiki/Online:Hel_Ra_Citadel",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/Hel_Ra_Citadel_small.jpg",
+      "guides": "[Alcast Guide](https://alcasthq.com/hel-ra-citadel-guide-for-elder-scrolls-online/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Hel+Ra+Citadel)",
+      "requirements": "CP160"
+  },
+
+  "nSO": {
+      "dps0": {
+          "name": "Left DPS",
+          "amount": 4
+      },
+      "dps1": {
+          "name": "Right DPS",
+          "amount": 4
+      },
+      "healer0": {
+          "name": "Left Heal",
+          "amount": 1
+      },
+      "healer1": {
+          "name": "Right Heal",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "tank1":{
+          "name": "Off-Tank",
+          "amount": 1
+      },
+      "title": "Trial, normal Sanctum Ophidia",
+      "description": "Main tank will taunt everything.\nOff-tank is a tough DPS with a taunt to complete the split section faster.\nLeft and Right healers heal and buff/debuff.\nLeft and right DPS have ben separated for the split.\nDon't forget the social distancing!",
+      "url": "https://en.uesp.net/wiki/Online:Sanctum_Ophidia",
+      "image": "https://elderscrollsonline.wiki.fextraliScreenshot from 2020-11-08 21-41-11fe.com/file/Elder-Scrolls-Online/sanctum-ophidia-eso-trial_small.jpg",
+      "guides": "[Alcast Guide](https://alcasthq.com/eso-sanctum-ophidia-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Sanctum+Ophidia)",
+      "requirements": "CP160"
+  },
+
+    "nMoL": {
         "dps0": {
             "name": "DPS",
             "amount": 5
         },
         "dps1": {
-            "name": "Mech. DPS",
+            "name": "Runner DPS",
             "amount": 3
         },
         "healer0": {
@@ -24,11 +127,172 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial of Maw of Lorkhaj",
-        "description": "DESCRIPTION HERE",
-        "url": "https://elderscrollsonline.wiki.fextralife.com/Maw+of+Lorkhaj",
+        "title": "Trial, normal Maw of Lorkhaj",
+        "description": "Main tank will fight the main boss at the end.\nOff-tank will keep the adds in check.\nMain and off- healers heal and buff/debuff.\nRunners go in the backyard if the group DPS is to low to burn the boss.\nDPS, if a Sun-Eater is in sight, KILL IT.",
+        "url": "https://en.uesp.net/wiki/Online:Maw_of_Lorkhaj",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/maw-of-lorkhaj_small.jpg",
-        "guides": "GUIDES HERE",
-        "requirements": "REQUIREMENTS HERE"
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-maw-of-lorkhaj-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Maw+of+Lorkhaj)",
+        "requirements": "CP160"
+    },
+
+    "nHoF": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 4
+        },
+        "dps1": {
+            "name": "Mech DPS",
+            "amount": 4
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1":{
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Halls of Fabrication",
+        "description": "Main tank tank the main bosses.\nOff-tank keeps the 2nd boss (or the blade arm) in check.\nMain heal heals the group.\nOff-heal heals and keep an eye on the tank\nMech DPS will go upstairs at the 2nd boss",
+        "url": "https://en.uesp.net/wiki/Online:Halls_of_Fabrication",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/HoF.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-halls-of-fabrication-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/The+Halls+of+Fabrication)",
+        "requirements": "CP160"
+    },
+
+    "nAS": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 4
+        },
+        "dps1": {
+            "name": "Mech DPS",
+            "amount": 4
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1":{
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Asylum Sanctorium",
+        "description": "DESCRIPTION",
+        "url": "https://en.uesp.net/wiki/Online:Asylum_Sanctorium",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/clockwork-city-dlc-eso-trial-asylum-sanctoriums.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-asylum-sanctorium-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Asylum+Sanctorium)",
+        "requirements": "CP160"
+    },
+
+    "nCR+0": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 5
+        },
+        "dps1": {
+            "name": "Portal DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1":{
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Cloudrest +0",
+        "description": "Main tank keeps the minis and Z'maja in check.\nOff-tank keeps the birds in check and go in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "url": "https://en.uesp.net/wiki/Online:Cloudrest",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
+        "requirements": "CP160"
+    },
+
+    "nSS": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 8
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1":{
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Sunspire",
+        "description": "Main tank A) tanks everything or B) is a tank in training.\nOff-tank is the emergency tank for the tank in training.\nMain heal heals the group.\nOff-heal heals and keep an eye on the tank\nDPS will focus on Alkosh Fate",
+        "url": "https://en.uesp.net/wiki/Online:Sunspire",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/sunspire-small.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-sunspire-trial-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Sunspire)",
+        "requirements": "CP160"
+    },
+
+    "nKA": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 4
+        },
+        "dps1": {
+            "name": "Mech DPS",
+            "amount": 4
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1":{
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Kyne's Aegis",
+        "description": "DESCRIPTION",
+        "url": "https://en.uesp.net/wiki/Online:Kyne%27s_Aegis",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/greymoor-dlc-eso-wiki-guide.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-kynes-aegis-trial-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Kyne's+Aegis)",
+        "requirements": "CP160"
     }
 }

@@ -41,7 +41,7 @@ class RegistrationMenu(menus.Menu):
         self.event_data = None
 
         self.event_type = "trial"
-        self.event_name = "Maw of Lorkhaj"
+        self.event_name = "nHRC"
         if self.event_type == "trial":
             self.template = {**BASE_DICT, **TRIALS_DATA[self.event_name]}
             # in py 3.9:
