@@ -45,7 +45,7 @@ class EventESO(commands.Cog):
     async def reload_menus_before(self):
         await self.bot.wait_until_ready()
 
-    @commands.group(invoke_without_command=True)
+    @commands.group(aliases=["trials"], invoke_without_command=True)
     async def trial(self, ctx, trial_name, *,
                     activation_time: DateTimeISO = None):
         """Trigger a trial event."""
