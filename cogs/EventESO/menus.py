@@ -37,8 +37,6 @@ class RegistrationMenu(menus.Menu):
     def __init__(self, *args, **kwargs):
         self.activation_time = kwargs.pop('activation_time')
         self.event_id = kwargs.pop('event_id', None)
-        self.embed = None
-        self.event_data = None
 
         self.event_type = "trial"
         self.event_name = "nHRC"
@@ -64,11 +62,10 @@ class RegistrationMenu(menus.Menu):
         """Send the initial, empty Embed for the registration."""
 
         self.message = await channel.send("Getting things ready...")
-        self.event_id = await self._create_event(self.activation_time)
-        self.event_data = await self._get_event_data()
+        self.event_id = await self._create_event()
         participants = await self._get_participants()
-        self.embed = self.build_embed(participants)
-        await self.message.edit(content=None, embed=self.embed)
+        embed = self.build_embed(participants)
+        await self.message.edit(content=None, embed=embed)
         return self.message
 
     def reaction_check(self, payload):
@@ -241,7 +238,7 @@ class RegistrationMenu(menus.Menu):
 
         return role_list
 
-    async def _create_event(self, activation_time):
+    async def _create_event(self):
         """Insert the Event data in the DB."""
 
         async with self.bot.db.execute(
