@@ -62,7 +62,7 @@
           "amount": 1
       },
       "title": "Trial, normal Hel Ra Citadel",
-      "description": "Main tank goes downstairs\nOff-tank goes upstairs. It is more of a tanky DPS with a taunt for the boss upstairs.\nThe healers are split for Upstaris and Downstaris\nSame for the DPS.",
+      "description": "Main tank goes downstairs\nOff-tank is gonna be a DPS, **Unless the main tank is a tank-in-training**.\nThe healers are split for Upstairs and Downstairs\nSame for the DPS.",
       "url": "https://en.uesp.net/wiki/Online:Hel_Ra_Citadel",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/Hel_Ra_Citadel_small.jpg",
       "guides": "[Alcast Guide](https://alcasthq.com/hel-ra-citadel-guide-for-elder-scrolls-online/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Hel+Ra+Citadel)",
@@ -97,7 +97,7 @@
       "title": "Trial, normal Sanctum Ophidia",
       "description": "Main tank will taunt everything.\nOff-tank is a tough DPS with a taunt to complete the split section faster.\nLeft and Right healers heal and buff/debuff.\nLeft and right DPS have ben separated for the split.\nDon't forget the social distancing!",
       "url": "https://en.uesp.net/wiki/Online:Sanctum_Ophidia",
-      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/sanctum-ophidia-eso-trial_small.jpg",
+      "image": "https://elderscrollsonline.wiki.fextraliScreenshot from 2020-11-08 21-41-11fe.com/file/Elder-Scrolls-Online/sanctum-ophidia-eso-trial_small.jpg",
       "guides": "[Alcast Guide](https://alcasthq.com/eso-sanctum-ophidia-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Sanctum+Ophidia)",
       "requirements": "CP160"
   },
@@ -294,5 +294,5 @@
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/greymoor-dlc-eso-wiki-guide.jpg",
         "guides": "[Alcast Guide](https://alcasthq.com/eso-kynes-aegis-trial-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Kyne's+Aegis)",
         "requirements": "CP160"
-    },
+    }
 }
