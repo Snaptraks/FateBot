@@ -45,8 +45,9 @@ class EventESO(commands.Cog):
     async def reload_menus_before(self):
         await self.bot.wait_until_ready()
 
-    @commands.command()
-    async def trial(self, ctx, *, activation_time: DateTimeISO = None):
+    @commands.group(aliases=["trials"], invoke_without_command=True)
+    async def trial(self, ctx, trial_name, *,
+                    activation_time: DateTimeISO = None):
         """Trigger a trial event."""
 
         if activation_time is None:
@@ -54,6 +55,7 @@ class EventESO(commands.Cog):
 
         await self._registration_task(
             ctx,
+            trial_name=trial_name,
             timeout=None,
             activation_time=activation_time,
         )
@@ -68,6 +70,16 @@ class EventESO(commands.Cog):
         else:
             raise error
 
+    @trial.command(name="list")
+    async def trial_list(self, ctx):
+        """Prints the list of trials available, and their abbreviation."""
+
+        content = []
+        for k, v in menus.TRIALS_DATA.items():
+            content.append(f"{v['title']} (`{k}`)")
+
+        await ctx.send("\n".join(content))
+
     async def _registration_task(self, ctx, **kwargs):
         """Task helper to start the registration menus and timer."""
 
@@ -77,10 +89,10 @@ class EventESO(commands.Cog):
         self.running_events[event_id] = menu
 
         await discord.utils.sleep_until(menu.activation_time)
-        await menu.stop()
+        participants = await menu.stop()
 
         users = []
-        for user_id in menu.participants:
+        for user_id in participants:
             user = (self.bot.get_user(user_id)
                     or await self.bot.fetch_user(user_id))
             users.append(user.mention)
@@ -98,7 +110,8 @@ class EventESO(commands.Cog):
                 channel_id      INTEGER   NOT NULL,
                 creation_time   TIMESTAMP NOT NULL,
                 message_id      INTEGER   NOT NULL,
-                type            INTEGER   NOT NULL
+                event_name     TEXT      NOT NULL,
+                event_type      TEXT      NOT NULL
             )
             """
         )

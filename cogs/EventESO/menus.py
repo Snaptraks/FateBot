@@ -25,7 +25,7 @@ REVERSE_BUTTONS = {v: k for k, v in BUTTONS.items()}
 
 BASE_DICT = {role: {"name": None, "amount": 0} for role in ALL_ROLES}
 
-trials_path = os.path.join("cogs", "EventESO",
+trials_path = os.path.join(os.path.dirname(__file__),
                            "templates", "trials.json")
 with open(trials_path) as f:
     TRIALS_DATA = json.load(f)
@@ -37,12 +37,9 @@ class RegistrationMenu(menus.Menu):
     def __init__(self, *args, **kwargs):
         self.activation_time = kwargs.pop('activation_time')
         self.event_id = kwargs.pop('event_id', None)
-        self.embed = None
-        self.event_data = None
-        self.participants = []
 
         self.event_type = "trial"
-        self.event_name = "nHRC"
+        self.event_name = kwargs.pop('trial_name')
         if self.event_type == "trial":
             self.template = {**BASE_DICT, **TRIALS_DATA[self.event_name]}
             # in py 3.9:
@@ -65,11 +62,10 @@ class RegistrationMenu(menus.Menu):
         """Send the initial, empty Embed for the registration."""
 
         self.message = await channel.send("Getting things ready...")
-        self.event_id = await self._create_event(self.activation_time)
-        self.event_data = await self._get_event_data()
+        self.event_id = await self._create_event()
         participants = await self._get_participants()
-        self.embed = self.build_embed(participants)
-        await self.message.edit(content=None, embed=self.embed)
+        embed = self.build_embed(participants)
+        await self.message.edit(content=None, embed=embed)
         return self.message
 
     def reaction_check(self, payload):
@@ -83,20 +79,16 @@ class RegistrationMenu(menus.Menu):
 
         return payload.emoji in self.buttons
 
-    async def start(self, *args, **kwargs):
-        """Override the function to get the Embed."""
-
-        await super().start(*args, **kwargs)
-
-        if self.embed is None:
-            self.embed = self.message.embeds[0]
-
-        if self.event_data is None:
-            self.event_data = await self._get_event_data()
+    # async def start(self, *args, **kwargs):
+    #     """Override the function to get the Embed."""
+    #
+    #     await super().start(*args, **kwargs)
 
     async def stop(self):
-        await self._get_participants()
+        participants = await self._get_participants()
+        user_ids = [user['user_id'] for user in participants]
         super().stop()
+        return user_ids
 
     def _skip_role(self, role):
         def check(menu):
@@ -115,14 +107,28 @@ class RegistrationMenu(menus.Menu):
         """Add the Leader role to the user."""
 
         participants = await self._get_participants()
+        user_ids = [user['user_id'] for user in participants]
+        if payload.user_id not in user_ids:
+            # do not let unregistered users in the Leader role
+            return
+
         role_list = self._classify_roles(participants)
         if len(role_list["leader"]) == 1:
+            # no more than one Leader
             return
 
         await self._add_event_role(payload.user_id, "leader")
         await self.update_page()
 
-    @menus.button(BUTTONS["clear"], position=menus.Last(0))
+    @menus.button(BUTTONS["fill"], position=menus.Last(0))
+    async def on_fill(self, payload):
+        """Add the user to the Fill list."""
+
+        await self._clear_participant(payload.user_id)
+        await self._add_event_role(payload.user_id, "fill")
+        await self.update_page()
+
+    @menus.button(BUTTONS["clear"], position=menus.Last(1))
     async def on_clear(self, payload):
         """Remove yourself from the event."""
 
@@ -133,11 +139,20 @@ class RegistrationMenu(menus.Menu):
         """Helper function to add the user to a role."""
 
         participants = await self._get_participants()
+        user_ids = [user['user_id'] for user in participants]
         role_list = self._classify_roles(participants)
         react_role = REVERSE_BUTTONS[payload.emoji.name]
+        role_max = self.template[react_role]['amount']
+        already_in_event = payload.user_id in user_ids
 
-        if len(role_list[react_role]) >= self.template[react_role]['amount']:
-            react_role = "fill"
+        if len(role_list[react_role]) >= role_max:
+            if not already_in_event:
+                react_role = "fill"
+
+            else:
+                # already in a role, the requested one is full,
+                # then do not change the user's role
+                return
 
         await self._remove_event_role(payload.user_id)
         await self._add_event_role(payload.user_id, react_role)
@@ -217,7 +232,7 @@ class RegistrationMenu(menus.Menu):
 
         return role_list
 
-    async def _create_event(self, activation_time):
+    async def _create_event(self):
         """Insert the Event data in the DB."""
 
         async with self.bot.db.execute(
@@ -227,14 +242,16 @@ class RegistrationMenu(menus.Menu):
                         :channel_id,
                         :creation_time,
                         :message_id,
-                        :type)
+                        :event_name,
+                        :event_type)
                 """,
                 {
-                    'activation_time': activation_time,
+                    'activation_time': self.activation_time,
                     'channel_id': self.message.channel.id,
                     'creation_time': self.message.created_at,
                     'message_id': self.message.id,
-                    'type': 0,
+                    'event_name': self.event_name,
+                    'event_type': self.event_type,
                 }
         ) as c:
             event_id = c.lastrowid
@@ -272,8 +289,6 @@ class RegistrationMenu(menus.Menu):
                 }
         ) as c:
             rows = await c.fetchall()
-
-        self.participants = [row['user_id'] for row in rows]
 
         return rows
 
