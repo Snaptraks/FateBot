@@ -39,7 +39,7 @@ class RegistrationMenu(menus.Menu):
         self.event_id = kwargs.pop('event_id', None)
 
         self.event_type = "trial"
-        self.event_name = "nHRC"
+        self.event_name = kwargs.pop('trial_name')
         if self.event_type == "trial":
             self.template = {**BASE_DICT, **TRIALS_DATA[self.event_name]}
             # in py 3.9:
@@ -79,16 +79,10 @@ class RegistrationMenu(menus.Menu):
 
         return payload.emoji in self.buttons
 
-    async def start(self, *args, **kwargs):
-        """Override the function to get the Embed."""
-
-        await super().start(*args, **kwargs)
-
-        if self.embed is None:
-            self.embed = self.message.embeds[0]
-
-        if self.event_data is None:
-            self.event_data = await self._get_event_data()
+    # async def start(self, *args, **kwargs):
+    #     """Override the function to get the Embed."""
+    #
+    #     await super().start(*args, **kwargs)
 
     async def stop(self):
         participants = await self._get_participants()
@@ -248,14 +242,16 @@ class RegistrationMenu(menus.Menu):
                         :channel_id,
                         :creation_time,
                         :message_id,
-                        :type)
+                        :event_name,
+                        :event_type)
                 """,
                 {
-                    'activation_time': activation_time,
+                    'activation_time': self.activation_time,
                     'channel_id': self.message.channel.id,
                     'creation_time': self.message.created_at,
                     'message_id': self.message.id,
-                    'type': 0,
+                    'event_name': self.event_name,
+                    'event_type': self.event_type,
                 }
         ) as c:
             event_id = c.lastrowid
