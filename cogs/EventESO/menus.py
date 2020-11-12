@@ -35,11 +35,12 @@ class RegistrationMenu(menus.Menu):
     """Menu for the role selection in an Event."""
 
     def __init__(self, *args, **kwargs):
-        self.activation_time = kwargs.pop('activation_time')
-        self.event_id = kwargs.pop('event_id', None)
+        event_data = kwargs.pop('event_data')
+        self.trigger_at = event_data['trigger_at']
+        self.event_id = event_data['event_id']
+        self.event_name = event_data['event_name']
+        self.event_type = event_data['event_type']
 
-        self.event_type = "trial"
-        self.event_name = kwargs.pop('trial_name')
         if self.event_type == "trial":
             self.template = {**BASE_DICT, **TRIALS_DATA[self.event_name]}
             # in py 3.9:
@@ -62,7 +63,8 @@ class RegistrationMenu(menus.Menu):
         """Send the initial, empty Embed for the registration."""
 
         self.message = await channel.send("Getting things ready...")
-        self.event_id = await self._create_event()
+        # update DB with message details
+        await self._update_event()
         participants = await self._get_participants()
         embed = self.build_embed(participants)
         await self.message.edit(content=None, embed=embed)
@@ -78,11 +80,6 @@ class RegistrationMenu(menus.Menu):
             return False
 
         return payload.emoji in self.buttons
-
-    # async def start(self, *args, **kwargs):
-    #     """Override the function to get the Embed."""
-    #
-    #     await super().start(*args, **kwargs)
 
     async def stop(self):
         participants = await self._get_participants()
@@ -175,7 +172,7 @@ class RegistrationMenu(menus.Menu):
             description=self.template['description'],
             url=self.template['url'],
             color=0x200972,
-            timestamp=self.activation_time,
+            timestamp=self.trigger_at,
         ).set_author(
             name=self.bot.user.name,
             icon_url=self.bot.user.avatar_url,
@@ -232,49 +229,27 @@ class RegistrationMenu(menus.Menu):
 
         return role_list
 
-    async def _create_event(self):
-        """Insert the Event data in the DB."""
-
-        async with self.bot.db.execute(
-                """
-                INSERT INTO eventeso_event
-                VALUES (:activation_time,
-                        :channel_id,
-                        :creation_time,
-                        :message_id,
-                        :event_name,
-                        :event_type)
-                """,
-                {
-                    'activation_time': self.activation_time,
-                    'channel_id': self.message.channel.id,
-                    'creation_time': self.message.created_at,
-                    'message_id': self.message.id,
-                    'event_name': self.event_name,
-                    'event_type': self.event_type,
-                }
-        ) as c:
-            event_id = c.lastrowid
+    async def _update_event(self):
+        """Update the DB entry with the info from the message
+        containing the Menu.
+        """
+        await self.bot.db.execute(
+            """
+            UPDATE eventeso_event
+               SET message_id = :message_id,
+                   channel_id = :channel_id,
+                   created_at = :created_at
+             WHERE rowid = :event_id
+            """,
+            {
+                'event_id': self.event_id,
+                'channel_id': self.message.channel.id,
+                'created_at': self.message.created_at,
+                'message_id': self.message.id,
+            }
+        )
 
         await self.bot.db.commit()
-
-        return event_id
-
-    async def _get_event_data(self):
-        """Get the data on the event from the DB and cache it."""
-
-        async with self.bot.db.execute(
-                """
-                SELECT * FROM eventeso_event
-                 WHERE rowid = :event_id
-                """,
-                {
-                    'event_id': self.event_id,
-                }
-        ) as c:
-            row = await c.fetchone()
-
-        return row
 
     async def _get_participants(self):
         """Get the list of participants, and their roles for the event."""
