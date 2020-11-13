@@ -117,7 +117,8 @@ class EventESO(commands.Cog):
                 f"`{self.bot.command_prefix}timeiso`."
             )
 
-        elif isinstance(error, EventAbbreviationError):
+        elif isinstance(error, (EventAbbreviationError,
+                                commands.MissingRequiredArgument)):
             await ctx.send(error)
 
         else:
