@@ -22,6 +22,10 @@ class EventIDNotRunning(commands.CommandError):
     """Exception raised when there is no running event at the provided ID."""
 
 
+class EventRoleNotFound(commands.CommandError):
+    """Exception raised when the provided role for the event is not found."""
+
+
 class DateTimeISO(commands.Converter):
     """Convert a string of ISO time to a datetime object."""
 
@@ -129,6 +133,79 @@ class EventESO(commands.Cog):
         await message.delete()
         del self.running_events[event_id]
         await self._stop_event(event_id)
+
+    @trial.command(name="add")
+    @commands.is_owner()  # to modify for role/permissions
+    async def trial_add(self, ctx, event_id: int, role: str,
+                        member: discord.Member):
+        """Administrator command to add a member to the event.
+        Must specify the event ID and desired role of the member.
+        """
+
+        try:
+            menu = self.running_events[event_id]['menu']
+        except KeyError:
+            raise EventIDNotRunning(f"No event running at ID `{event_id}`.")
+
+        if role not in menus.ALL_ROLES:
+            raise EventRoleNotFound(f"Role {role} is not valid.")
+
+        button = menus.BUTTONS[role]
+
+        await self.fake_button_press(menu, member, button)
+
+    @trial.command(name="remove")
+    @commands.is_owner()  # to modify for role/permissions
+    async def trial_remove(self, ctx, event_id: int, member: discord.Member):
+        """Administrator command to remove a member to the event.
+        Must specify the event ID.
+        """
+
+        try:
+            menu = self.running_events[event_id]['menu']
+        except KeyError:
+            raise EventIDNotRunning(f"No event running at ID `{event_id}`.")
+
+        button = menus.BUTTONS['clear']
+
+        await self.fake_button_press(menu, member, button)
+
+    @trial_cancel.error
+    @trial_add.error
+    @trial_remove.error
+    async def trial_admin_error(self, ctx, error):
+        """Error handler for the trial administration commands."""
+
+        if isinstance(error, (
+                EventIDNotRunning,
+                EventRoleNotFound,
+                commands.MemberNotFound,
+        )):
+            await ctx.send(error)
+
+        else:
+            raise error
+
+    async def fake_button_press(self, menu, member, button):
+        """Call the function that handles button press with a fake payload."""
+
+        # this is hackish
+        emoji = discord.PartialEmoji(name=button)
+        payload = discord.RawReactionActionEvent(
+            data={
+                'message_id': menu.message.id,
+                'channel_id': menu.message.channel.id,
+                'user_id': member.id,
+                'guild_id': menu.message.guild.id,
+            },
+            emoji=emoji,
+            event_type='REACTION_ADD',
+        )
+
+        if emoji.name == menus.BUTTONS['clear']:
+            await menu.on_clear(payload)
+        else:
+            await menu._button_add_role(payload)
 
     @trial.command(name="list")
     async def trial_list(self, ctx):
