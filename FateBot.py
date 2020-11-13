@@ -47,7 +47,7 @@ if __name__ == '__main__':
         description="Bot for the Fate Bound ESO Guild.",
         command_prefix="&",
         intents=intents,
-        db_name='FateBot.db',
+        db_name='db/FateBot.db',
     )
 
     startup_extensions = [
