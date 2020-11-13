@@ -246,7 +246,10 @@ class EventESO(commands.Cog):
                     or await self.bot.fetch_user(user_id))
             users.add(user.mention)
 
-        await ctx.send(f"Trial Time {' '.join(list(users))}")
+        await ctx.send(
+            f"Hey {', '.join(list(users))}! It is time for the "
+            f"{menu.template['title']}."
+        )
         del self.running_events[event_id]
         await self._stop_event(event_id)
 
