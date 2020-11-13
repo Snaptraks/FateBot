@@ -5,6 +5,13 @@ import discord
 from discord.ext import commands, tasks
 from . import menus
 
+ADMIN_ROLES = [
+    612353582628470835,  # Officer
+    704199892339261550,  # Senior Officer
+    612352389973934102,  # Guildmasters
+    758707783330693161,  # Bot Tester Role (don't mind me)
+]
+
 
 class DateTimeISOError(commands.CommandError):
     """Exception raised when the provided argument is not a valid ISO
@@ -117,7 +124,7 @@ class EventESO(commands.Cog):
             raise error
 
     @trial.command(name="cancel")
-    @commands.is_owner()  # to modify for role/permissions
+    @commands.has_any_role(ADMIN_ROLES)
     async def trial_cancel(self, ctx, event_id: int):
         """Cancel a trial of given ID."""
 
@@ -135,7 +142,7 @@ class EventESO(commands.Cog):
         await self._stop_event(event_id)
 
     @trial.command(name="add")
-    @commands.is_owner()  # to modify for role/permissions
+    @commands.has_any_role(ADMIN_ROLES)
     async def trial_add(self, ctx, event_id: int, role: str,
                         member: discord.Member):
         """Administrator command to add a member to the event.
@@ -155,7 +162,7 @@ class EventESO(commands.Cog):
         await self.fake_button_press(menu, member, button)
 
     @trial.command(name="remove")
-    @commands.is_owner()  # to modify for role/permissions
+    @commands.has_any_role(ADMIN_ROLES)
     async def trial_remove(self, ctx, event_id: int, member: discord.Member):
         """Administrator command to remove a member to the event.
         Must specify the event ID.
