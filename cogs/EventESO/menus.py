@@ -138,7 +138,14 @@ class RegistrationMenu(menus.Menu):
         participants = await self._get_participants()
         user_ids = [user['user_id'] for user in participants]
         role_list = self._classify_roles(participants)
-        react_role = REVERSE_BUTTONS[payload.emoji.name]
+        try:
+            # unicode emoji
+            react_role = REVERSE_BUTTONS[payload.emoji.name]
+        except KeyError:
+            # custom emoji
+            e = payload.emoji
+            tag = f"<:{e.name}:{e.id}>"
+            react_role = REVERSE_BUTTONS[tag]
         role_max = self.template[react_role]['amount']
         already_in_event = payload.user_id in user_ids
 
