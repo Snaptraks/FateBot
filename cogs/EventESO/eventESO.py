@@ -240,13 +240,13 @@ class EventESO(commands.Cog):
         await discord.utils.sleep_until(menu.trigger_at)
         participants = await menu.stop()
 
-        users = []
+        users = set()
         for user_id in participants:
             user = (self.bot.get_user(user_id)
                     or await self.bot.fetch_user(user_id))
-            users.append(user.mention)
+            users.add(user.mention)
 
-        await ctx.send(f"Trial Time {' '.join(users)}")
+        await ctx.send(f"Trial Time {' '.join(list(users))}")
         del self.running_events[event_id]
         await self._stop_event(event_id)
 
