@@ -80,12 +80,12 @@ class EventESO(commands.Cog):
         await self.bot.wait_until_ready()
 
     @commands.group(aliases=["trials"], invoke_without_command=True)
-    async def trial(self, ctx, trial_name="nAA", *,
+    async def trial(self, ctx, trial_name, *,
                     trigger_at: DateTimeISO = None):
         """Trigger a trial event."""
 
         if trigger_at is None:
-            trigger_at = datetime.utcnow() + timedelta(hours=1)
+            trigger_at = datetime.utcnow() + timedelta(weeks=1)
 
         if trial_name not in menus.TRIALS_DATA.keys():
             raise EventAbbreviationError(f"Unknown trial `{trial_name}`.")
