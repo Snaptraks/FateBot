@@ -18,6 +18,10 @@ class EventAbbreviationError(commands.CommandError):
     """
 
 
+class EventIDNotRunning(commands.CommandError):
+    """Exception raised when there is no running event at the provided ID."""
+
+
 class DateTimeISO(commands.Converter):
     """Convert a string of ISO time to a datetime object."""
 
@@ -112,6 +116,9 @@ class EventESO(commands.Cog):
     @commands.is_owner()  # to modify for role/permissions
     async def trial_cancel(self, ctx, event_id: int):
         """Cancel a trial of given ID."""
+
+        if event_id not in self.running_events.keys():
+            raise EventIDNotRunning(f"No event running at ID `{event_id}`.")
 
         event_data = await self._get_event_data(event_id)
         channel = self.bot.get_channel(event_data['channel_id'])
