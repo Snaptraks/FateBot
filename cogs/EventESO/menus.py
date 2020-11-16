@@ -174,19 +174,23 @@ class RegistrationMenu(menus.Menu):
 
         role_list = self._classify_roles(participants)
 
+        trigger_at_fmt = self.trigger_at.strftime("%Y-%m-%d %H:%M UTC")
+
         embed = discord.Embed(
             title=self.template['title'],
             description=self.template['description'],
             url=self.template['url'],
             color=0x200972,
-            timestamp=self.trigger_at,
         ).set_author(
             name=self.bot.user.name,
             icon_url=self.bot.user.avatar_url,
         ).set_image(
             url=self.template['image'],
         ).set_footer(
-            text=f"Event ID {self.event_id} | Happening on ",
+            text=(
+                f"Event ID {self.event_id} | "
+                f"Happening on {trigger_at_fmt}"
+            ),
         ).add_field(
             name="Guides",
             value=self.template['guides'],
