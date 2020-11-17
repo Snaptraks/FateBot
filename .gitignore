@@ -141,3 +141,5 @@ cython_debug/
 config.py
 *.db
 *.db-journal
+*.tar
+TestBot.py

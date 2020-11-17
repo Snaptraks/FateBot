@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+    bot:
+        build: .
+        image: fatebot:latest
+        container_name: fatebot
+        restart: always
+        volumes:
+            - "./db:/db"
