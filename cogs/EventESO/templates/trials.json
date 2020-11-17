@@ -198,7 +198,7 @@
     "nCR+0": {
         "dps0": {
             "name": "DPS",
-            "amount": 5
+            "amount": 6.
         },
         "dps1": {
             "name": "Portal DPS",
@@ -221,7 +221,103 @@
             "amount": 1
         },
         "title": "Trial, normal Cloudrest +0",
-        "description": "Main tank keeps the minis and Z'maja in check.\nOff-tank keeps the birds in check and go in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "description": "Main tank keeps the birds and Z'maja in check.\nOff-tank keeps the minis in check and go in Z'maja's portal.Can be replaced by a DPS.\nMain heal heals the group.\nOff-heal heals and kite the laser beam. Goes downstairs if no off-tank.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "url": "https://en.uesp.net/wiki/Online:Cloudrest",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
+        "requirements": "CP160"
+    },
+    "nCR+1": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 5
+        },
+        "dps1": {
+            "name": "Portal DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1": {
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Cloudrest +1",
+        "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "url": "https://en.uesp.net/wiki/Online:Cloudrest",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
+        "requirements": "CP160"
+    },
+    "nCR+2": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 5
+        },
+        "dps1": {
+            "name": "Portal DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1": {
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Cloudrest +2",
+        "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "url": "https://en.uesp.net/wiki/Online:Cloudrest",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
+        "requirements": "CP160"
+    },
+    "nCR+3": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 5
+        },
+        "dps1": {
+            "name": "Portal DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1": {
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Cloudrest +3",
+        "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
         "url": "https://en.uesp.net/wiki/Online:Cloudrest",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
         "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
