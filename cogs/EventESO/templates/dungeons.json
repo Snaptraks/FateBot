@@ -1,0 +1,148 @@
+{
+    "randnorm": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 2
+        },
+        "healer0": {
+            "name": "Healer",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "title": "Dungeon, Random normal",
+        "description": "Farming XP or transmute? This quick dungeon is for you!",
+        "url": "https://en.uesp.net/wiki/Online:Group_Dungeons",
+        "image": "https://static.wikia.nocookie.net/elderscrolls/images/5/5a/TESO_Logo.png/revision/latest/scale-to-width-down/200?cb=20120512153814",
+        "guides": "[Alcast Guide](https://alcasthq.com/category/eso-trial-arena-dungeon/eso-dungeon-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Group+Dungeons)",
+        "requirements": "none"
+    },
+
+    "randvet": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Dungeon, Random veteran",
+      "description": "Looking for something more challenging, but don't know what to do? Let's do a random vet!",
+      "url": "https://en.uesp.net/wiki/Online:Group_Dungeons",
+      "image": "https://static.wikia.nocookie.net/elderscrolls/images/5/5a/TESO_Logo.png/revision/latest/scale-to-width-down/200?cb=20120512153814",
+      "guides": "[Alcast Guide](https://alcasthq.com/category/eso-trial-arena-dungeon/eso-dungeon-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Group+Dungeons)",
+      "requirements": "CP160"
+    },
+
+    "pledges": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Dungeon, Pledges",
+      "description": "Prove you're an Undaunted and get some keys!",
+      "url": "https://en.uesp.net/wiki/Online:Group_Dungeons",
+      "image": "https://static.wikia.nocookie.net/elderscrolls/images/5/5a/TESO_Logo.png/revision/latest/scale-to-width-down/200?cb=20120512153814",
+      "guides": "[Alcast Guide](https://alcasthq.com/category/eso-trial-arena-dungeon/eso-dungeon-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Group+Dungeons)",
+      "requirements": "CP160"
+    },
+
+    "AC": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Dungeon, Arx Corinium",
+      "description": "Here you can farm:\n[Sellistrix](https://elderscrollsonline.wiki.fextralife.com/Sellistrix+Set)\n[Lamia's Song](https://elderscrollsonline.wiki.fextralife.com/Lamia's+Song+Set)\n[Undaunted Infiltrator](https://elderscrollsonline.wiki.fextralife.com/Undaunted+Infiltrator+Set)\n[Medusa](https://elderscrollsonline.wiki.fextralife.com/Medusa+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Arx_Corinium",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/arxcorinium.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Arx+Corinium)",
+      "requirements": "CP160"
+    },
+
+    "BC1": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Dungeon, Banished Cells I",
+      "description": "Here you can farm:\n[Shadowrend](https://elderscrollsonline.wiki.fextralife.com/Shadowrend+Set)\n[Sanctuary](https://elderscrollsonline.wiki.fextralife.com/Sanctuary+Set)\n[Jailbreaker](https://elderscrollsonline.wiki.fextralife.com/Jailbreaker+Set)\n[Tormentor](https://elderscrollsonline.wiki.fextralife.com/Tormentor+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Banished_Cells_I",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/banishedcells.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Banished+Cells+I)",
+      "requirements": "CP160"
+    },
+
+    "BC2": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Dungeon, Banished Cells II",
+      "description": "Here you can farm:\n[Maw of the Infernal](https://elderscrollsonline.wiki.fextralife.com/Maw+of+the+Infernal+Set)\n[Sanctuary](https://elderscrollsonline.wiki.fextralife.com/Sanctuary+Set)\n[Jailbreaker](https://elderscrollsonline.wiki.fextralife.com/Jailbreaker+Set)\n[Tormentor](https://elderscrollsonline.wiki.fextralife.com/Tormentor+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Banished_Cells_II",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/banishedcells.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Banished+Cells+II)",
+      "requirements": "CP160"
+    },
+
+    "BH": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Dungeon, Blackheart Haven",
+      "description": "Here you can farm:\n[Pirate Skeleton](https://elderscrollsonline.wiki.fextralife.com/Pirate+Skeleton+Set)\n[Undaunted Unweaver(https://elderscrollsonline.wiki.fextralife.com/Undaunted+Unweaver+Set)\n[Bone Pirate's Tatters](https://elderscrollsonline.wiki.fextralife.com/Bone+Pirate's+Tatters+Set)\n[Knight-Errant's Mail](https://elderscrollsonline.wiki.fextralife.com/Knight-Errant's+Mail+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Balckheart_Haven",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/blackhearthaven.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Blackheart+Haven)",
+      "requirements": "CP160"
+    }
+}

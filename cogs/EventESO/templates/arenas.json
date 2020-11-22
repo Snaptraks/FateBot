@@ -1,0 +1,84 @@
+{
+    "nBRP": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 2
+        },
+        "healer0": {
+            "name": "Healer",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "title": "Arena, normal Blackrose Prison",
+        "description": "Here you can farm:\n[Radial Uppercut](https://elderscrollsonline.wiki.fextralife.com/Radial+Uppercut+Set)\n[Gallant Charge](https://elderscrollsonline.wiki.fextralife.com/Gallant+Charge+Set)\n[Spectral Cloak](https://elderscrollsonline.wiki.fextralife.com/Spectral+Cloak+Set)\n[Razor Shot](https://elderscrollsonline.wiki.fextralife.com/Razor+Shot+Set)\n[Wild Impulse](https://elderscrollsonline.wiki.fextralife.com/Wild+Impulse+Set)\n[Mender's Ward](https://elderscrollsonline.wiki.fextralife.com/Mender%E2%80%99s+Ward+Set)",
+        "url": "https://en.uesp.net/wiki/Online:Blackrose_Prison",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/murmire_dlc_2.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-blackrose-prison-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Blackrose+Prison)\n[Xynode's Guide](https://xynodegaming.com/blackrose-prison/)",
+        "requirements": "CP160"
+    },
+
+    "vBRP": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 2
+        },
+        "healer0": {
+            "name": "Healer",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "title": "Arena, veteran Blackrose Prison",
+        "description": "Here you can farm:\n[Radial Uppercut](https://elderscrollsonline.wiki.fextralife.com/Radial+Uppercut+Set)\n[Gallant Charge](https://elderscrollsonline.wiki.fextralife.com/Gallant+Charge+Set)\n[Spectral Cloak](https://elderscrollsonline.wiki.fextralife.com/Spectral+Cloak+Set)\n[Razor Shot](https://elderscrollsonline.wiki.fextralife.com/Razor+Shot+Set)\n[Wild Impulse](https://elderscrollsonline.wiki.fextralife.com/Wild+Impulse+Set)\n[Mender's Ward](https://elderscrollsonline.wiki.fextralife.com/Mender%E2%80%99s+Ward+Set)",
+        "url": "https://en.uesp.net/wiki/Online:Blackrose_Prison",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/murmire_dlc_2.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-blackrose-prison-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Blackrose+Prison)\n[Xynode's Guide](https://xynodegaming.com/blackrose-prison/)",
+        "requirements": "CP160"
+    },
+
+    "nDSA": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 2
+        },
+        "healer0": {
+            "name": "Healer",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "title": "Arena, normal Dragonstar Arena",
+        "description": "Here you can farm:\n[Stinging Slashes](https://elderscrollsonline.wiki.fextralife.com/Stinging+Slashes+Set)\n[Destructive Impact](https://elderscrollsonline.wiki.fextralife.com/Destructive+Impact+Set)\n[Puncturing Remedy](https://elderscrollsonline.wiki.fextralife.com/Puncturing+Remedy+Set)\n[Titanic Cleave](https://elderscrollsonline.wiki.fextralife.com/Titanic+Cleave+Set)\n[Caustic Arraow](https://elderscrollsonline.wiki.fextralife.com/Caustic+Arrow+Set)\n[Grand Rejuvenation](https://elderscrollsonline.wiki.fextralife.com/Grand+Rejuvenation+Set)",
+        "url": "https://en.uesp.net/wiki/Online:Dragonstar_Arena",
+        "image": "https://images.uesp.net/thumb/7/79/ON-interior-Dragonstar_Arena_02.jpg/200px-ON-interior-Dragonstar_Arena_02.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-dragonstar-arena-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Dragonstar+Arena)\n[Xynode's Guide](https://xynodegaming.com/dragonstar-arena/)",
+        "requirements": "CP160"
+    },
+    "vDSA": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 2
+        },
+        "healer0": {
+            "name": "Healer",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "title": "Arena, veteran Dragonstar Arena",
+        "description": "Here you can farm:\n[Stinging Slashes](https://elderscrollsonline.wiki.fextralife.com/Stinging+Slashes+Set)\n[Destructive Impact](https://elderscrollsonline.wiki.fextralife.com/Destructive+Impact+Set)\n[Puncturing Remedy](https://elderscrollsonline.wiki.fextralife.com/Puncturing+Remedy+Set)\n[Titanic Cleave](https://elderscrollsonline.wiki.fextralife.com/Titanic+Cleave+Set)\n[Caustic Arraow](https://elderscrollsonline.wiki.fextralife.com/Caustic+Arrow+Set)\n[Grand Rejuvenation](https://elderscrollsonline.wiki.fextralife.com/Grand+Rejuvenation+Set)",
+        "url": "https://en.uesp.net/wiki/Online:Dragonstar_Arena",
+        "image": "https://images.uesp.net/thumb/7/79/ON-interior-Dragonstar_Arena_02.jpg/200px-ON-interior-Dragonstar_Arena_02.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-dragonstar-arena-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Dragonstar+Arena)\n[Xynode's Guide](https://xynodegaming.com/dragonstar-arena/)",
+        "requirements": "CP160"
+    }
+}
