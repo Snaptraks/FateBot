@@ -79,6 +79,30 @@ class EventESO(commands.Cog):
     async def reload_menus_before(self):
         await self.bot.wait_until_ready()
 
+    @commands.command(aliases=["arenas"])
+    async def arena(self, ctx, arena_name, *,
+                    trigger_at: DateTimeISO = None):
+        """Trigger an arena event."""
+
+        await self._event_master(
+            ctx,
+            "arena",
+            arena_name,
+            trigger_at,
+        )
+
+    @commands.command(aliases=["dungeons"])
+    async def dungeon(self, ctx, dungeon_name, *,
+                      trigger_at: DateTimeISO = None):
+        """Trigger a dungeon event."""
+
+        await self._event_master(
+            ctx,
+            "dungeon",
+            dungeon_name,
+            trigger_at,
+        )
+
     @commands.command(aliases=["trials"])
     async def trial(self, ctx, trial_name, *,
                     trigger_at: DateTimeISO = None):
@@ -138,7 +162,7 @@ class EventESO(commands.Cog):
             )
         )
 
-    @commands.group()
+    @commands.group(aliases=["events"])
     @commands.has_any_role(*ADMIN_ROLES)
     async def event(self, ctx):
         """Command group to administrate event registrations."""
@@ -239,6 +263,9 @@ class EventESO(commands.Cog):
     async def _list(self, ctx, event_type):
         """Print the list of events available, and their abbreviation."""
 
+        if event_type.endswith("s"):
+            event_type = event_type[:-1]
+
         event_data = self._get_event_type_data(event_type)
 
         content = []
@@ -247,11 +274,30 @@ class EventESO(commands.Cog):
 
         await ctx.send("\n".join(content))
 
+    @_list.error
+    async def _list_error(self, ctx, error):
+        """Error handler for the list command."""
+
+        if isinstance(error.original, ValueError):
+            await ctx.send(error.original)
+
+        else:
+            raise error
+
     def _get_event_type_data(self, event_type):
         """Helper command to return the list of event keys."""
 
-        if event_type == "trial":
+        if event_type == "arena":
+            event_list = menus.ARENAS_DATA
+
+        elif event_type == "dungeon":
+            event_list = menus.DUNGEONS_DATA
+
+        elif event_type == "trial":
             event_list = menus.TRIALS_DATA
+
+        else:
+            raise ValueError(f"No known event type {event_type}.")
 
         return event_list
 

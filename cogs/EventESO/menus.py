@@ -25,9 +25,12 @@ REVERSE_BUTTONS = {v: k for k, v in BUTTONS.items()}
 
 BASE_DICT = {role: {"name": None, "amount": 0} for role in ALL_ROLES}
 
-trials_path = os.path.join(os.path.dirname(__file__),
-                           "templates", "trials.json")
-with open(trials_path) as f:
+template_path = os.path.join(os.path.dirname(__file__), "templates")
+with open(os.path.join(template_path, "arenas.json")) as f:
+    ARENAS_DATA = json.load(f)
+with open(os.path.join(template_path, "dungeons.json")) as f:
+    DUNGEONS_DATA = json.load(f)
+with open(os.path.join(template_path, "trials.json")) as f:
     TRIALS_DATA = json.load(f)
 
 
@@ -41,7 +44,13 @@ class RegistrationMenu(menus.Menu):
         self.event_name = event_data['event_name']
         self.event_type = event_data['event_type']
 
-        if self.event_type == "trial":
+        if self.event_type == "arena":
+            self.template = {**BASE_DICT, **ARENAS_DATA[self.event_name]}
+
+        elif self.event_type == "dungeon":
+            self.template = {**BASE_DICT, **DUNGEONS_DATA[self.event_name]}
+
+        elif self.event_type == "trial":
             self.template = {**BASE_DICT, **TRIALS_DATA[self.event_name]}
             # in py 3.9:
             # self.template = BASE_DICT | TRIALS_DATA[self.event_name]
