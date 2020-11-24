@@ -188,7 +188,7 @@ class RegistrationMenu(menus.Menu):
             url=self.template['image'],
         ).set_footer(
             text=(
-                f"Event ID {self.event_id} | "
+                f"Event ID {self.event_id:03d} | "
                 f"Happening on {trigger_at_fmt}"
             ),
         ).add_field(
