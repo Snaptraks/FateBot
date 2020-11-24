@@ -117,9 +117,9 @@ class EventESO(commands.Cog):
         if trigger_at is None:
             trigger_at = datetime.utcnow() + timedelta(weeks=1)
 
-        event_list = self._get_event_type_list(event_type)
+        event_data = self._get_event_type_data(event_type)
 
-        if event_name not in event_list:
+        if event_name not in event_data.keys():
             raise EventAbbreviationError(f"Unknown trial `{event_name}`.")
 
         event_id = await self._create_event(
@@ -235,15 +235,25 @@ class EventESO(commands.Cog):
         else:
             await menu._button_add_role(payload)
 
-    @trial.command(name="list")
-    async def trial_list(self, ctx):
-        """Print the list of trials available, and their abbreviation."""
+    @commands.command(name="list")
+    async def _list(self, ctx, event_type):
+        """Print the list of events available, and their abbreviation."""
+
+        event_data = self._get_event_type_data(event_type)
 
         content = []
-        for k, v in menus.TRIALS_DATA.items():
+        for k, v in event_data.items():
             content.append(f"{v['title']} (`{k}`)")
 
         await ctx.send("\n".join(content))
+
+    def _get_event_type_data(self, event_type):
+        """Helper command to return the list of event keys."""
+
+        if event_type == "trial":
+            event_list = menus.TRIALS_DATA
+
+        return event_list
 
     @commands.command()
     async def timeiso(self, ctx):
