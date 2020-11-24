@@ -267,7 +267,8 @@ class RegistrationMenu(menus.Menu):
 
         async with self.bot.db.execute(
                 """
-                SELECT * FROM eventeso_participant
+                SELECT *
+                  FROM eventeso_participant
                  WHERE event_id = :event_id
                 """,
                 {
