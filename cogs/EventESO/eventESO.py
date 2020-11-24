@@ -84,31 +84,16 @@ class EventESO(commands.Cog):
                     trigger_at: DateTimeISO = None):
         """Trigger a trial event."""
 
-        if trigger_at is None:
-            trigger_at = datetime.utcnow() + timedelta(weeks=1)
-
-        if trial_name not in menus.TRIALS_DATA.keys():
-            raise EventAbbreviationError(f"Unknown trial `{trial_name}`.")
-
-        event_id = await self._create_event(
-            trigger_at,
-            trial_name,
+        await self._event_master(
+            ctx,
             "trial",
-        )
-        event_data = dict(await self._get_event_data(event_id))
-
-        id = event_data['event_id']
-        self.running_events[id]['task'] = self.bot.loop.create_task(
-            self._registration_task(
-                ctx,
-                event_data=event_data,
-                timeout=None,
-            )
+            trial_name,
+            trigger_at,
         )
 
     @trial.error
-    async def trial_error(self, ctx, error):
-        """Error handler for the trial command."""
+    async def base_event_error(self, ctx, error):
+        """Error handler for the event commands."""
 
         if isinstance(error, DateTimeISOError):
             await ctx.send(
@@ -124,10 +109,43 @@ class EventESO(commands.Cog):
         else:
             raise error
 
-    @trial.command(name="cancel")
-    @commands.has_any_role(ADMIN_ROLES)
-    async def trial_cancel(self, ctx, event_id: int):
-        """Cancel a trial of given ID."""
+    async def _event_master(self, ctx, event_type, event_name, trigger_at):
+        """Function to create the event of type event_type, with
+        the provided arguments.
+        """
+
+        if trigger_at is None:
+            trigger_at = datetime.utcnow() + timedelta(weeks=1)
+
+        event_list = self._get_event_type_list(event_type)
+
+        if event_name not in event_list:
+            raise EventAbbreviationError(f"Unknown trial `{event_name}`.")
+
+        event_id = await self._create_event(
+            event_type,
+            event_name,
+            trigger_at,
+        )
+        event_data = dict(await self._get_event_data(event_id))
+
+        id = event_data['event_id']
+        self.running_events[id]['task'] = self.bot.loop.create_task(
+            self._registration_task(
+                ctx,
+                event_data=event_data,
+                timeout=None,
+            )
+        )
+
+    @commands.group()
+    @commands.has_any_role(*ADMIN_ROLES)
+    async def event(self, ctx):
+        """Command group to administrate event registrations."""
+
+    @event.command(name="cancel")
+    async def event_cancel(self, ctx, event_id: int):
+        """Cancel an event of given ID."""
 
         if event_id not in self.running_events.keys():
             raise EventIDNotRunning(f"No event running at ID `{event_id}`.")
@@ -142,9 +160,8 @@ class EventESO(commands.Cog):
         del self.running_events[event_id]
         await self._stop_event(event_id)
 
-    @trial.command(name="add")
-    @commands.has_any_role(ADMIN_ROLES)
-    async def trial_add(self, ctx, event_id: int, role: str,
+    @event.command(name="add")
+    async def event_add(self, ctx, event_id: int, role: str,
                         member: discord.Member):
         """Administrator command to add a member to the event.
         Must specify the event ID and desired role of the member.
@@ -162,9 +179,8 @@ class EventESO(commands.Cog):
 
         await self.fake_button_press(menu, member, button)
 
-    @trial.command(name="remove")
-    @commands.has_any_role(ADMIN_ROLES)
-    async def trial_remove(self, ctx, event_id: int, member: discord.Member):
+    @event.command(name="remove")
+    async def event_remove(self, ctx, event_id: int, member: discord.Member):
         """Administrator command to remove a member to the event.
         Must specify the event ID.
         """
@@ -178,10 +194,11 @@ class EventESO(commands.Cog):
 
         await self.fake_button_press(menu, member, button)
 
-    @trial_cancel.error
-    @trial_add.error
-    @trial_remove.error
-    async def trial_admin_error(self, ctx, error):
+    @event.error
+    @event_cancel.error
+    @event_add.error
+    @event_remove.error
+    async def event_admin_error(self, ctx, error):
         """Error handler for the trial administration commands."""
 
         if isinstance(error, (
@@ -190,6 +207,9 @@ class EventESO(commands.Cog):
                 commands.MemberNotFound,
         )):
             await ctx.send(error)
+
+        elif isinstance(error, commands.MissingAnyRole):
+            await ctx.send("You do not have the required role(s).")
 
         else:
             raise error
@@ -294,7 +314,7 @@ class EventESO(commands.Cog):
 
         await self.bot.db.commit()
 
-    async def _create_event(self, trigger_at, event_name, event_type):
+    async def _create_event(self, event_type, event_name, trigger_at):
         """Insert the Event data in the DB."""
 
         async with self.bot.db.execute(
