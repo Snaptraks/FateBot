@@ -1,4 +1,25 @@
 {
+  "Generic": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 8
+      },
+      "healer0": {
+          "name": "Heals",
+          "amount": 2
+      },
+      "tank0": {
+          "name": "Tanks",
+          "amount": 2
+      },
+      "title": "Trial, Generic",
+      "description": "Let's do some trials! For transmutes, gear, plunder or experience. Join the team and have fun\nRoles are generic so we can adapt to anything.",
+      "url": "https://en.uesp.net/wiki/Online:Trials",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/aetherian_archive_eso_trial.jpg",
+      "guides": "[Alcast Guide](https://alcasthq.com/category/eso-trial-arena-dungeon/eso-trial-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Trials)",
+      "requirements": "CP160"
+  },
+
     "nAA": {
         "dps0": {
             "name": "Right DPS",
@@ -35,6 +56,7 @@
         "guides": "[Alcast Guide](https://alcasthq.com/eso-aetherian-archive-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Aetherian+Archive)",
         "requirements": "CP160"
     },
+
     "nHRC": {
         "dps0": {
             "name": "Down DPS",
@@ -67,6 +89,7 @@
         "guides": "[Alcast Guide](https://alcasthq.com/hel-ra-citadel-guide-for-elder-scrolls-online/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Hel+Ra+Citadel)",
         "requirements": "CP160"
     },
+
     "nSO": {
         "dps0": {
             "name": "Left DPS",
@@ -99,6 +122,7 @@
         "guides": "[Alcast Guide](https://alcasthq.com/eso-sanctum-ophidia-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Sanctum+Ophidia)",
         "requirements": "CP160"
     },
+
     "nMoL": {
         "dps0": {
             "name": "DPS",
@@ -131,6 +155,7 @@
         "guides": "[Alcast Guide](https://alcasthq.com/eso-maw-of-lorkhaj-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Maw+of+Lorkhaj)",
         "requirements": "CP160"
     },
+
     "nHoF": {
         "dps0": {
             "name": "DPS",
@@ -163,6 +188,7 @@
         "guides": "[Alcast Guide](https://alcasthq.com/eso-halls-of-fabrication-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/The+Halls+of+Fabrication)",
         "requirements": "CP160"
     },
+
     "nAS": {
         "dps0": {
             "name": "DPS",
@@ -195,7 +221,41 @@
         "guides": "[Alcast Guide](https://alcasthq.com/eso-asylum-sanctorium-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Asylum+Sanctorium)",
         "requirements": "CP160"
     },
+
     "nCR+0": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 6
+        },
+        "dps1": {
+            "name": "Portal DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1": {
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Cloudrest +0",
+        "description": "Main tank keeps the birds and Z'maja in check.\nOff-tank keeps the minis in check and go in Z'maja's portal.Can be replaced by a DPS.\nMain heal heals the group.\nOff-heal heals and kite the laser beam. Goes downstairs if no off-tank.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "url": "https://en.uesp.net/wiki/Online:Cloudrest",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
+        "requirements": "CP160"
+    },
+
+    "nCR+1": {
         "dps0": {
             "name": "DPS",
             "amount": 5
@@ -220,13 +280,80 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Cloudrest +0",
-        "description": "Main tank keeps the minis and Z'maja in check.\nOff-tank keeps the birds in check and go in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "title": "Trial, normal Cloudrest +1",
+        "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
         "url": "https://en.uesp.net/wiki/Online:Cloudrest",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
         "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
         "requirements": "CP160"
     },
+
+    "nCR+2": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 5
+        },
+        "dps1": {
+            "name": "Portal DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1": {
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Cloudrest +2",
+        "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "url": "https://en.uesp.net/wiki/Online:Cloudrest",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
+        "requirements": "CP160"
+    },
+
+    "nCR+3": {
+        "dps0": {
+            "name": "DPS",
+            "amount": 5
+        },
+        "dps1": {
+            "name": "Portal DPS",
+            "amount": 3
+        },
+        "healer0": {
+            "name": "Main Heal",
+            "amount": 1
+        },
+        "healer1": {
+            "name": "Off-Heal",
+            "amount": 1
+        },
+        "tank0": {
+            "name": "Main Tank",
+            "amount": 1
+        },
+        "tank1": {
+            "name": "Off-Tank",
+            "amount": 1
+        },
+        "title": "Trial, normal Cloudrest +3",
+        "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
+        "url": "https://en.uesp.net/wiki/Online:Cloudrest",
+        "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
+        "guides": "[Alcast Guide](https://alcasthq.com/eso-cloudrest-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cloudrest)",
+        "requirements": "CP160"
+    },
+
     "nSS": {
         "dps0": {
             "name": "DPS",
@@ -255,6 +382,7 @@
         "guides": "[Alcast Guide](https://alcasthq.com/eso-sunspire-trial-guide/)\n[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Sunspire)",
         "requirements": "CP160"
     },
+
     "nKA": {
         "dps0": {
             "name": "DPS",
