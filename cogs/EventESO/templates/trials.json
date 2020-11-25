@@ -5,12 +5,20 @@
           "amount": 8
       },
       "healer0": {
-          "name": "Heals",
-          "amount": 2
+          "name": "Main Heal",
+          "amount": 1
+      },
+      "healer0": {
+          "name": "Off-Heal",
+          "amount": 1
       },
       "tank0": {
-          "name": "Tanks",
-          "amount": 2
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "healer0": {
+          "name": "Off-Tank",
+          "amount": 1
       },
       "title": "Generic Trial",
       "description": "Let's do some trials! For transmutes, gear, plunder or experience. Join the team and have fun\nRoles are generic so we can adapt to anything.",
