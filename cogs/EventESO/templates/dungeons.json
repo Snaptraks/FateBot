@@ -62,8 +62,6 @@
       "requirements": "CP160"
     },
 
-
-%%%Non-DLC_Dungeons
     "AC": {
       "dps0": {
           "name": "DPS",
@@ -568,7 +566,6 @@
       "requirements": "CP160"
     },
 
-%%%DLC_Dungeons
     "ICP": {
       "dps0": {
           "name": "DPS",
@@ -736,15 +733,6 @@
       "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Scalecaller+Peak)",
       "requirements": "CP160"
     },
-
-
-
-
-
-
-
-
-
 
     "MoS": {
       "dps0": {
