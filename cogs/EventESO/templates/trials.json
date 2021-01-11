@@ -5,14 +5,22 @@
           "amount": 8
       },
       "healer0": {
-          "name": "Heals",
-          "amount": 2
+          "name": "Main Heal",
+          "amount": 1
+      },
+      "healer0": {
+          "name": "Off-Heal",
+          "amount": 1
       },
       "tank0": {
-          "name": "Tanks",
-          "amount": 2
+          "name": "Main Tank",
+          "amount": 1
       },
-      "title": "Trial, Generic",
+      "healer0": {
+          "name": "Off-Tank",
+          "amount": 1
+      },
+      "title": "Generic Trial",
       "description": "Let's do some trials! For transmutes, gear, plunder or experience. Join the team and have fun\nRoles are generic so we can adapt to anything.",
       "url": "https://en.uesp.net/wiki/Online:Trials",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/aetherian_archive_eso_trial.jpg",
@@ -49,7 +57,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Aetherian Archives",
+        "title": "Normal Aetherian Archives",
         "description": "The roles have been splited for the 2 teleports. Main and off-tank are going at the center.\nMain tank should be able to tank everything in normal.\nOff-tank is a DPS unless there is a main tank-in-training.",
         "url": "https://en.uesp.net/wiki/Online:Aetherian_Archive",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/aetherian_archive_eso_trial.jpg",
@@ -82,7 +90,7 @@
             "name": "Off-tank",
             "amount": 1
         },
-        "title": "Trial, normal Hel Ra Citadel",
+        "title": "Normal Hel Ra Citadel",
         "description": "Main tank goes downstairs\nOff-tank is gonna be a DPS, **Unless the main tank is a tank-in-training**.\nThe healers are split for Upstairs and Downstairs\nSame for the DPS.",
         "url": "https://en.uesp.net/wiki/Online:Hel_Ra_Citadel",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/Hel_Ra_Citadel_small.jpg",
@@ -115,7 +123,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Sanctum Ophidia",
+        "title": "Normal Sanctum Ophidia",
         "description": "Main tank will taunt everything.\nOff-tank is a tough DPS with a taunt to complete the split section faster.\nLeft and Right healers heal and buff/debuff.\nLeft and right DPS have ben separated for the split.\nDon't forget the social distancing!",
         "url": "https://en.uesp.net/wiki/Online:Sanctum_Ophidia",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/sanctum-ophidia-eso-trial_small.jpg",
@@ -148,7 +156,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Maw of Lorkhaj",
+        "title": "Normal Maw of Lorkhaj",
         "description": "Main tank will fight the main boss at the end.\nOff-tank will keep the adds in check.\nMain and off- healers heal and buff/debuff.\nRunners go in the backyard if the group DPS is to low to burn the boss.\nDPS, if a Sun-Eater is in sight, KILL IT.",
         "url": "https://en.uesp.net/wiki/Online:Maw_of_Lorkhaj",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/maw-of-lorkhaj_small.jpg",
@@ -181,7 +189,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Halls of Fabrication",
+        "title": "Normal Halls of Fabrication",
         "description": "Main tank tank the main bosses.\nOff-tank keeps the 2nd boss (or the blade arm) in check.\nMain heal heals the group.\nOff-heal heals and keep an eye on the tank\nMech DPS will go upstairs at the 2nd boss",
         "url": "https://en.uesp.net/wiki/Online:Halls_of_Fabrication",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/HoF.jpg",
@@ -214,7 +222,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Asylum Sanctorium",
+        "title": "Normal Asylum Sanctorium",
         "description": "DESCRIPTION",
         "url": "https://en.uesp.net/wiki/Online:Asylum_Sanctorium",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/clockwork-city-dlc-eso-trial-asylum-sanctoriums.jpg",
@@ -247,7 +255,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Cloudrest +0",
+        "title": "Normal Cloudrest +0",
         "description": "Main tank keeps the birds and Z'maja in check.\nOff-tank keeps the minis in check and go in Z'maja's portal.Can be replaced by a DPS.\nMain heal heals the group.\nOff-heal heals and kite the laser beam. Goes downstairs if no off-tank.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
         "url": "https://en.uesp.net/wiki/Online:Cloudrest",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
@@ -280,7 +288,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Cloudrest +1",
+        "title": "Normal Cloudrest +1",
         "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
         "url": "https://en.uesp.net/wiki/Online:Cloudrest",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
@@ -313,7 +321,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Cloudrest +2",
+        "title": "Normal Cloudrest +2",
         "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
         "url": "https://en.uesp.net/wiki/Online:Cloudrest",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
@@ -346,7 +354,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Cloudrest +3",
+        "title": "Normal Cloudrest +3",
         "description": "Main tank keeps birds and Z'maja in check. Also take the mini when off-tank is downstairs.\nOff-tank keeps the minis in check and goes in Z'maja's portal.\nMain heal heals the group.\nOff-heal heals and kite the laser beam.\nPortal DPS are going in Z'maja's portal.\nDPS will focus on Grapes>Creepers>Z'maja",
         "url": "https://en.uesp.net/wiki/Online:Cloudrest",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cloudrest-trial-eso-summerset.jpg",
@@ -375,7 +383,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Sunspire",
+        "title": "Normal Sunspire",
         "description": "Main tank A) tanks everything or B) is a tank in training.\nOff-tank is the emergency tank for the tank in training.\nMain heal heals the group.\nOff-heal heals and keep an eye on the tank\nDPS will focus on Alkosh Fate",
         "url": "https://en.uesp.net/wiki/Online:Sunspire",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/sunspire-small.jpg",
@@ -408,7 +416,7 @@
             "name": "Off-Tank",
             "amount": 1
         },
-        "title": "Trial, normal Kyne's Aegis",
+        "title": "Normal Kyne's Aegis",
         "description": "DESCRIPTION",
         "url": "https://en.uesp.net/wiki/Online:Kyne%27s_Aegis",
         "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/greymoor-dlc-eso-wiki-guide.jpg",

@@ -12,7 +12,7 @@
             "name": "Main Tank",
             "amount": 1
         },
-        "title": "Dungeon, Random normal",
+        "title": "Random Normal",
         "description": "Farming XP or transmute? This quick dungeon is for you!",
         "url": "https://en.uesp.net/wiki/Online:Group_Dungeons",
         "image": "https://static.wikia.nocookie.net/elderscrolls/images/5/5a/TESO_Logo.png/revision/latest/scale-to-width-down/200?cb=20120512153814",
@@ -33,7 +33,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Random veteran",
+      "title": "Random Veteran",
       "description": "Looking for something more challenging, but don't know what to do? Let's do a random vet!",
       "url": "https://en.uesp.net/wiki/Online:Group_Dungeons",
       "image": "https://static.wikia.nocookie.net/elderscrolls/images/5/5a/TESO_Logo.png/revision/latest/scale-to-width-down/200?cb=20120512153814",
@@ -54,7 +54,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Pledges",
+      "title": "Pledges",
       "description": "Prove you're an Undaunted and get some keys!",
       "url": "https://en.uesp.net/wiki/Online:Group_Dungeons",
       "image": "https://static.wikia.nocookie.net/elderscrolls/images/5/5a/TESO_Logo.png/revision/latest/scale-to-width-down/200?cb=20120512153814",
@@ -62,6 +62,8 @@
       "requirements": "CP160"
     },
 
+
+%%%Non-DLC_Dungeons
     "AC": {
       "dps0": {
           "name": "DPS",
@@ -75,7 +77,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Arx Corinium",
+      "title": "Arx Corinium",
       "description": "Here you can farm:\n[Sellistrix](https://elderscrollsonline.wiki.fextralife.com/Sellistrix+Set)\n[Lamia's Song](https://elderscrollsonline.wiki.fextralife.com/Lamia's+Song+Set)\n[Undaunted Infiltrator](https://elderscrollsonline.wiki.fextralife.com/Undaunted+Infiltrator+Set)\n[Medusa](https://elderscrollsonline.wiki.fextralife.com/Medusa+Set)",
       "url": "https://en.uesp.net/wiki/Online:Arx_Corinium",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/arxcorinium.jpg",
@@ -96,7 +98,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Banished Cells I",
+      "title": "Banished Cells I",
       "description": "Here you can farm:\n[Shadowrend](https://elderscrollsonline.wiki.fextralife.com/Shadowrend+Set)\n[Sanctuary](https://elderscrollsonline.wiki.fextralife.com/Sanctuary+Set)\n[Jailbreaker](https://elderscrollsonline.wiki.fextralife.com/Jailbreaker+Set)\n[Tormentor](https://elderscrollsonline.wiki.fextralife.com/Tormentor+Set)",
       "url": "https://en.uesp.net/wiki/Online:Banished_Cells_I",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/banishedcells.jpg",
@@ -117,7 +119,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Banished Cells II",
+      "title": "Banished Cells II",
       "description": "Here you can farm:\n[Maw of the Infernal](https://elderscrollsonline.wiki.fextralife.com/Maw+of+the+Infernal+Set)\n[Sanctuary](https://elderscrollsonline.wiki.fextralife.com/Sanctuary+Set)\n[Jailbreaker](https://elderscrollsonline.wiki.fextralife.com/Jailbreaker+Set)\n[Tormentor](https://elderscrollsonline.wiki.fextralife.com/Tormentor+Set)",
       "url": "https://en.uesp.net/wiki/Online:Banished_Cells_II",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/banishedcells.jpg",
@@ -138,7 +140,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Blackheart Haven",
+      "title": "Blackheart Haven",
       "description": "Here you can farm:\n[Pirate Skeleton](https://elderscrollsonline.wiki.fextralife.com/Pirate+Skeleton+Set)\n[Undaunted Unweaver](https://elderscrollsonline.wiki.fextralife.com/Undaunted+Unweaver+Set)\n[Bone Pirate's Tatters](https://elderscrollsonline.wiki.fextralife.com/Bone+Pirate's+Tatters+Set)\n[Knight-Errant's Mail](https://elderscrollsonline.wiki.fextralife.com/Knight-Errant's+Mail+Set)",
       "url": "https://en.uesp.net/wiki/Online:Balckheart_Haven",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/blackhearthaven.jpg",
@@ -159,7 +161,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Blessed Crucible",
+      "title": "Blessed Crucible",
       "description": "Here you can farm:\n[Troll King](https://elderscrollsonline.wiki.fextralife.com/Troll+King+Set)\n[Noble Duelist](https://elderscrollsonline.wiki.fextralife.com/Noble+Duelist's+Silks+Set)\n[Sword Dancer](https://elderscrollsonline.wiki.fextralife.com/Sword+Dancer+Set)\n[Nikulas](https://elderscrollsonline.wiki.fextralife.com/Nikulas'+Heavy+Armor+Set)",
       "url": "https://en.uesp.net/wiki/Online:Blessed_Crucible",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/blessedcrucible.jpg",
@@ -180,7 +182,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, City of Ash I",
+      "title": "City of Ash I",
       "description": "Here you can farm:\n[Infernal Guardian](https://elderscrollsonline.wiki.fextralife.com/Infernal+Guardian+Set)\n[Burning Spellweave](https://elderscrollsonline.wiki.fextralife.com/Burning+Spellweave+Set)\n[Sunderflame](https://elderscrollsonline.wiki.fextralife.com/Sunderflame+Set)\n[Embershield](https://elderscrollsonline.wiki.fextralife.com/Embershield+Set)",
       "url": "https://en.uesp.net/wiki/Online:City_of_Ash_I",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cityofashi.jpg",
@@ -201,7 +203,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, City of Ash II",
+      "title": "City of Ash II",
       "description": "Here you can farm:\n[Valkyn Skoria](https://elderscrollsonline.wiki.fextralife.com/Valkyn+Skoria+Set)\n[Burning Spellweave](https://elderscrollsonline.wiki.fextralife.com/Burning+Spellweave+Set)\n[Sunderflame](https://elderscrollsonline.wiki.fextralife.com/Sunderflame+Set)\n[Embershield](https://elderscrollsonline.wiki.fextralife.com/Embershield+Set)",
       "url": "https://en.uesp.net/wiki/Online:City_of_Ash_II",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cityofashi.jpg",
@@ -222,7 +224,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Crypt of Hearts I",
+      "title": "Crypt of Hearts I",
       "description": "Here you can farm:\n[Ilambris](https://elderscrollsonline.wiki.fextralife.com/Ilambris+Set)\n[Lich](https://elderscrollsonline.wiki.fextralife.com/Shroud+of+the+Lich+Set)\n[Leviathan](https://elderscrollsonline.wiki.fextralife.com/Leviathan+Set)\n[Ebon Armory](https://elderscrollsonline.wiki.fextralife.com/Ebon+Armory+Set)",
       "url": "https://en.uesp.net/wiki/Online:Crypt_of_Hearts_I",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cryptofhearts.jpg",
@@ -243,7 +245,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Crypt of Hearts II",
+      "title": "Crypt of Hearts II",
       "description": "Here you can farm:\n[Nerien'eth](https://elderscrollsonline.wiki.fextralife.com/Nerien'eth+Set)\n[Lich](https://elderscrollsonline.wiki.fextralife.com/Shroud+of+the+Lich+Set)\n[Leviathan](https://elderscrollsonline.wiki.fextralife.com/Leviathan+Set)\n[Ebon Armory](https://elderscrollsonline.wiki.fextralife.com/Ebon+Armory+Set)",
       "url": "https://en.uesp.net/wiki/Online:Crypt_of_Hearts_II",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cryptofhearts.jpg",
@@ -264,7 +266,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Darkshade Cavern I",
+      "title": "Darkshade Cavern I",
       "description": "Here you can farm:\n[Sentinel of Rkugamz](https://elderscrollsonline.wiki.fextralife.com/Sentinel+of+Rkugamz+Set)\n[Netch's Touch](https://elderscrollsonline.wiki.fextralife.com/Netch's+Touch+Set)\n[Strength of the Automaton](https://elderscrollsonline.wiki.fextralife.com/Strength+of+the+Automaton+Set)\n[Armor of Truth](https://elderscrollsonline.wiki.fextralife.com/Armor+of+Truth+Set)",
       "url": "https://en.uesp.net/wiki/Online:Darkshade_Caverns_I",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/darkshadecavernsii.jpg",
@@ -285,7 +287,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Darkshade Cavern II",
+      "title": "Darkshade Cavern II",
       "description": "Here you can farm:\n[Engine Guardian](https://elderscrollsonline.wiki.fextralife.com/Engine+Guardian+Set)\n[Netch's Touch](https://elderscrollsonline.wiki.fextralife.com/Netch's+Touch+Set)\n[Strength of the Automaton](https://elderscrollsonline.wiki.fextralife.com/Strength+of+the+Automaton+Set)\n[Armor of Truth](https://elderscrollsonline.wiki.fextralife.com/Armor+of+Truth+Set)",
       "url": "https://en.uesp.net/wiki/Online:Darkshade_Caverns_II",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/darkshadecavernsii.jpg",
@@ -306,7 +308,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Direfrost Keep",
+      "title": "Direfrost Keep",
       "description": "Here you can farm:\n[Iceheart](https://elderscrollsonline.wiki.fextralife.com/Iceheart+Set)\n[Magicka Furnace](https://elderscrollsonline.wiki.fextralife.com/Magicka+Furnace+Set)\n[Draugr Hulk](https://elderscrollsonline.wiki.fextralife.com/Draugr+Hulk+Set)\n[Ice Furnace](https://elderscrollsonline.wiki.fextralife.com/Ice+Furnace+Set)",
       "url": "https://en.uesp.net/wiki/Online:Direfrost_Keep",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/direfrostkeep.jpg",
@@ -327,7 +329,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Elden Hollow I",
+      "title": "Elden Hollow I",
       "description": "Here you can farm:\n[Chokethorn](https://elderscrollsonline.wiki.fextralife.com/Chokethorn+Set)\n[Light Speaker](https://elderscrollsonline.wiki.fextralife.com/Light+Speaker+Set)\n[Barkskin](https://elderscrollsonline.wiki.fextralife.com/Barkskin+Set)\n[Undaunted Bastion](https://elderscrollsonline.wiki.fextralife.com/Undaunted+Bastion+Set)",
       "url": "https://en.uesp.net/wiki/Online:Elden_Hollow_I",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/eldenhollow.jpg",
@@ -348,7 +350,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Elden Hollow II",
+      "title": "Elden Hollow II",
       "description": "Here you can farm:\n[Nightflame](https://elderscrollsonline.wiki.fextralife.com/Nightflame+Set)\n[Light Speaker](https://elderscrollsonline.wiki.fextralife.com/Light+Speaker+Set)\n[Barkskin](https://elderscrollsonline.wiki.fextralife.com/Barkskin+Set)\n[Undaunted Bastion](https://elderscrollsonline.wiki.fextralife.com/Undaunted+Bastion+Set)",
       "url": "https://en.uesp.net/wiki/Online:Elden_Hollow_II",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/eldenhollow.jpg",
@@ -369,7 +371,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Fungal Grotto I",
+      "title": "Fungal Grotto I",
       "description": "Here you can farm:\n[Kra'gh](https://elderscrollsonline.wiki.fextralife.com/Kra'gh+Set)\n[Spider Cultist](https://elderscrollsonline.wiki.fextralife.com/Spider+Cultist+Cowl+Set)\n[Viper's Sting](https://elderscrollsonline.wiki.fextralife.com/Viper's+Sting+Set)\n[Dreugh King Slayer](https://elderscrollsonline.wiki.fextralife.com/Dreugh+King+Slayer+Set)",
       "url": "https://en.uesp.net/wiki/Online:Fungal_Grotto_I",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/fungalgrotto.jpg",
@@ -390,7 +392,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Fungal Grotto II",
+      "title": "Fungal Grotto II",
       "description": "Here you can farm:\n[Spawn of Mephala](https://elderscrollsonline.wiki.fextralife.com/Spawn+of+Mephala+Set)\n[Spider Cultist](https://elderscrollsonline.wiki.fextralife.com/Spider+Cultist+Cowl+Set)\n[Viper's Sting](https://elderscrollsonline.wiki.fextralife.com/Viper's+Sting+Set)\n[Dreugh King Slayer](https://elderscrollsonline.wiki.fextralife.com/Dreugh+King+Slayer+Set)",
       "url": "https://en.uesp.net/wiki/Online:Fungal_Grotto_II",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/fungalgrotto.jpg",
@@ -411,7 +413,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Selene's Web",
+      "title": "Selene's Web",
       "description": "Here you can farm:\n[Selene](https://elderscrollsonline.wiki.fextralife.com/Selene+Set)\n[Vestment of the Warlock](https://elderscrollsonline.wiki.fextralife.com/Vestments+of+the+Warlock+Set)\n[Hircine's Veneer](https://elderscrollsonline.wiki.fextralife.com/Hircine's+Veneer+Set)\n[Dorok's Bane](https://elderscrollsonline.wiki.fextralife.com/Durok's+Bane+Set)",
       "url": "https://en.uesp.net/wiki/Online:Selene%27s_Web",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/selenesweb.jpg",
@@ -432,7 +434,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Spindleclutch I",
+      "title": "Spindleclutch I",
       "description": "Here you can farm:\n[Swarm Mother](https://elderscrollsonline.wiki.fextralife.com/Swarm+Mother+Set)\n[Prayer Shawl](https://elderscrollsonline.wiki.fextralife.com/Prayer+Shawl+Set)\n[Spelunker](https://elderscrollsonline.wiki.fextralife.com/Spelunker+Set)\n[Knightmare](https://elderscrollsonline.wiki.fextralife.com/Knightmare+Set)",
       "url": "https://en.uesp.net/wiki/Online:Spindleclutch_I",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/Spindleclutch.jpg",
@@ -453,7 +455,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Spindleclutch II",
+      "title": "Spindleclutch II",
       "description": "Here you can farm:\n[Blood Spawn](https://elderscrollsonline.wiki.fextralife.com/Blood+Spawn+Set)\n[Prayer Shawl](https://elderscrollsonline.wiki.fextralife.com/Prayer+Shawl+Set)\n[Spelunker](https://elderscrollsonline.wiki.fextralife.com/Spelunker+Set)\n[Knightmare](https://elderscrollsonline.wiki.fextralife.com/Knightmare+Set)",
       "url": "https://en.uesp.net/wiki/Online:Spindleclutch_II",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/Spindleclutch.jpg",
@@ -474,7 +476,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Tempest Island",
+      "title": "Tempest Island",
       "description": "Here you can farm:\n[Stormfist](https://elderscrollsonline.wiki.fextralife.com/Stormfist+Set)\n[Overwhelming Surge](https://elderscrollsonline.wiki.fextralife.com/Overwhelming+Surge+Set)\n[Storm Master](https://elderscrollsonline.wiki.fextralife.com/Storm+Master+Set)\n[Jolting Arms](https://elderscrollsonline.wiki.fextralife.com/Jolting+Arms+Set)",
       "url": "https://en.uesp.net/wiki/Online:Tempest_Island",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/tempestisand.jpg",
@@ -495,7 +497,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Vaults of Madness",
+      "title": "Vaults of Madness",
       "description": "Here you can farm:\n[Grothdarr](https://elderscrollsonline.wiki.fextralife.com/Grothdarr+Set)\n[Worm's Raiment](https://elderscrollsonline.wiki.fextralife.com/Worm's+Raiment+Set)\n[Oblivion's Edge](https://elderscrollsonline.wiki.fextralife.com/Oblivion's+Edge+Set)\n[Rattlecage](https://elderscrollsonline.wiki.fextralife.com/Rattlecage+Set)",
       "url": "https://en.uesp.net/wiki/Online:Vaults_of_Madness",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/vaultsofmadness.jpg",
@@ -516,7 +518,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Volenfell",
+      "title": "Volenfell",
       "description": "Here you can farm:\n[Tremorscale](https://elderscrollsonline.wiki.fextralife.com/Tremorscale+Set)\n[Treasure Hunter](https://elderscrollsonline.wiki.fextralife.com/Treasure+Hunter+Set)\n[Crusader](https://elderscrollsonline.wiki.fextralife.com/Crusader+Set)\n[Duneripper's Scales](https://elderscrollsonline.wiki.fextralife.com/Duneripper's+Scales+Set)",
       "url": "https://en.uesp.net/wiki/Online:Vaults_of_Madness",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/vaultsofmadness.jpg",
@@ -537,7 +539,7 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Wayrest Sewers I",
+      "title": "Wayrest Sewers I",
       "description": "Here you can farm:\n[Slimecraw](https://elderscrollsonline.wiki.fextralife.com/Slimecraw+Set)\n[Combat Physician](https://elderscrollsonline.wiki.fextralife.com/Combat+Physician+Set)\n[Toothrow](https://elderscrollsonline.wiki.fextralife.com/Toothrow+Set)\n[Sergean's Mail](https://elderscrollsonline.wiki.fextralife.com/Sergeant's+Mail+Set)",
       "url": "https://en.uesp.net/wiki/Online:Wayrest_Sewers_I",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/wayrestsewers.jpg",
@@ -558,11 +560,399 @@
           "name": "Main Tank",
           "amount": 1
       },
-      "title": "Dungeon, Wayrest Sewers II",
+      "title": "Wayrest Sewers II",
       "description": "Here you can farm:\n[Scourge Harvester](https://elderscrollsonline.wiki.fextralife.com/Scourge+Harvester+Set)\n[Combat Physician](https://elderscrollsonline.wiki.fextralife.com/Combat+Physician+Set)\n[Toothrow](https://elderscrollsonline.wiki.fextralife.com/Toothrow+Set)\n[Sergean's Mail](https://elderscrollsonline.wiki.fextralife.com/Sergeant's+Mail+Set)",
       "url": "https://en.uesp.net/wiki/Online:Wayrest_Sewers_II",
       "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/wayrestsewers.jpg",
       "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Wayrest+Sewers+II)",
+      "requirements": "CP160"
+    },
+
+%%%DLC_Dungeons
+    "ICP": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Imperial City Prison",
+      "description": "Here you can farm:\n[Lord Warden](https://elderscrollsonline.wiki.fextralife.com/Lord+Warden+Set)\n[Scathing Mage](https://elderscrollsonline.wiki.fextralife.com/Scathing+Mage+Set)\n[Sheer Venom](https://elderscrollsonline.wiki.fextralife.com/Sheer+Venom+Set)\n[Leeching Plate](https://elderscrollsonline.wiki.fextralife.com/Leeching+Plate+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Imperial_City_Prison",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/imperial_city_prison_group_dungeon.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Imperial+City+Prison)",
+      "requirements": "CP160"
+    },
+
+    "WGT": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "White-Gold Tower",
+      "description": "Here you can farm:\n[Molag Kena](https://elderscrollsonline.wiki.fextralife.com/Molag+Kena+Set)\n[Spell Power Cure](https://elderscrollsonline.wiki.fextralife.com/Spell+Power+Cure+Set)\n[Essence Thief](https://elderscrollsonline.wiki.fextralife.com/Essence+Thief+Set)\n[Brands of Imperium](https://elderscrollsonline.wiki.fextralife.com/Brands+of+Imperium+Set)",
+      "url": "https://en.uesp.net/wiki/Online:White-Gold_Tower",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/wayrestsewers.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/White-Gold+Tower)",
+      "requirements": "CP160"
+    },
+
+    "CoS": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Cradle of Shadows",
+      "description": "Here you can farm:\n[Velidreth](https://elderscrollsonline.wiki.fextralife.com/Velidreth+Set)\n[Gossamer](https://elderscrollsonline.wiki.fextralife.com/Gossamer+Set)\n[Widowmaker](https://elderscrollsonline.wiki.fextralife.com/Widowmaker+Set)\n[Hamd of Mephala](https://elderscrollsonline.wiki.fextralife.com/Hand+of+Mephala+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Cradle_of_Shadows",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/cradleofshadows2.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Cradle+of+Shadows)",
+      "requirements": "CP160"
+    },
+
+    "RoM": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Ruins of Mazzatun",
+      "description": "Here you can farm:\n[Mighty Chudan](https://elderscrollsonline.wiki.fextralife.com/Mighty+Chudan+Set)\n[Amber Plasm](https://elderscrollsonline.wiki.fextralife.com/Amber+Plasm+Set)\n[Heem-Jas'Retribution](https://elderscrollsonline.wiki.fextralife.com/Heem-Jas'+Retribution+Set)\n[Aspect of Mazzatun](https://elderscrollsonline.wiki.fextralife.com/Aspect+of+Mazzatun+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Ruins_of_Mazzatun",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/ruinsofmazzatun2.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Ruins+of+Mazzatun)",
+      "requirements": "CP160"
+    },
+
+    "BrF": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Bloodroot Forge",
+      "description": "Here you can farm:\n[Earthgore](https://elderscrollsonline.wiki.fextralife.com/Earthgore+Set)\n[Flame Blossom](https://elderscrollsonline.wiki.fextralife.com/Flame+Blossom+Set)\n[Blooddrinker](https://elderscrollsonline.wiki.fextralife.com/Blooddrinker+Set)\n[Hagraven's Garden](https://elderscrollsonline.wiki.fextralife.com/Hagraven's+Garden+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Bloodroot_Forge",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/bloodroot_forge_group_dungeon.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Bloodroot+Forge)",
+      "requirements": "CP160"
+    },
+
+    "FH": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Falkreath Hold",
+      "description": "Here you can farm:\n[Domihaus](https://elderscrollsonline.wiki.fextralife.com/Domihaus+Set)\n[Draugr's Rest](https://elderscrollsonline.wiki.fextralife.com/Draugr's+Rest+Set)\n[Pillar of Nirn](https://elderscrollsonline.wiki.fextralife.com/Pillar+of+Nirn+Set)\n[Ironblood](https://elderscrollsonline.wiki.fextralife.com/Ironblood+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Falkreath_Hold",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/falkreath_hold_group_dungeon.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Falkreath+Hold)",
+      "requirements": "CP160"
+    },
+
+    "FL": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Fang Lair",
+      "description": "Here you can farm:\n[Thurvokun](https://elderscrollsonline.wiki.fextralife.com/Thurvokun+Set)\n[Caluurion's Legacy](https://elderscrollsonline.wiki.fextralife.com/Caluurion's+Legacy+Set)\n[Trappings of Invigoration](https://elderscrollsonline.wiki.fextralife.com/Trappings+of+Invigoration+Set)\n[Ulfnor's Favor](https://elderscrollsonline.wiki.fextralife.com/Ulfnor's+Favor+Set)",
+      "url": "https://en.uesp.net/wiki/Fang_Lair",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/fang_lair_group_dungeon.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Fang+Lair)",
+      "requirements": "CP160"
+    },
+
+    "SCP": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Scalecaller Peak",
+      "description": "Here you can farm:\n[Zaan](https://elderscrollsonline.wiki.fextralife.com/Zaan+Set)\n[Jorvuld's Guidance](https://elderscrollsonline.wiki.fextralife.com/Jorvuld's+Guidance+Set)\n[Plague Slinger](https://elderscrollsonline.wiki.fextralife.com/Plague+Slinger+Set)\n[Curse of Doleymish](https://elderscrollsonline.wiki.fextralife.com/Curse+of+Doylemish+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Scalecaller_Peak",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/scalecaller_peak_group_dungeon.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Scalecaller+Peak)",
+      "requirements": "CP160"
+    },
+
+
+
+
+
+
+
+
+
+
+    "MoS": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "March of Sacrifice",
+      "description": "Here you can farm:\n[Balorgh](https://elderscrollsonline.wiki.fextralife.com/Balorgh+Set)\n[Hanu's Compassion](https://elderscrollsonline.wiki.fextralife.com/Hanu's+Compassion+Set)\n[Blood Moon](https://elderscrollsonline.wiki.fextralife.com/Blood+Moon+Set)\n[Haven of Ursus](https://elderscrollsonline.wiki.fextralife.com/Haven+of+Ursus+Set)",
+      "url": "https://en.uesp.net/wiki/Online:March_of_Sacrifice",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/marchofsacrifices.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/March+of+Sacrifice)",
+      "requirements": "CP160"
+    },
+
+    "MHK": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Moon Hunter Keep",
+      "description": "Here you can farm:\n[Vykosa](https://elderscrollsonline.wiki.fextralife.com/Vykosa+Set)\n[Moon Hunter](https://elderscrollsonline.wiki.fextralife.com/Moon+Hunter+Set)\n[Savage Werewolf](https://elderscrollsonline.wiki.fextralife.com/Savage+Werewolf+Set)\n[Jailer's Tenacity](https://elderscrollsonline.wiki.fextralife.com/Jailer's+Tenacity+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Moon_Hunter_Keep",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/wolfhunterkeep.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Moon+Hunter+Keep",
+      "requirements": "CP160"
+    },
+
+    "DoM": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Depths of Malatar",
+      "description": "Here you can farm:\n[Symphony of Blade](https://elderscrollsonline.wiki.fextralife.com/Symphony+of+Blades+Set)\n[Auroran's Thunder](https://elderscrollsonline.wiki.fextralife.com/Auroran's+Thunder+Set)\n[Scavenging Demise](https://elderscrollsonline.wiki.fextralife.com/Scavenging+Demise+Set)\n[Frozen Watcher](https://elderscrollsonline.wiki.fextralife.com/Frozen+Watcher+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Depths_of_Malatar",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/depths-of-malatar-placeholder.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Depths+of+Malatar)",
+      "requirements": "CP160"
+    },
+
+    "Fv": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Frostvault",
+      "description": "Here you can farm:\n[Stonekeeper](https://elderscrollsonline.wiki.fextralife.com/Stonekeeper+Set)\n[Icy Conjuror](https://elderscrollsonline.wiki.fextralife.com/Icy+Conjuror+Set)\n[Tzogvin's Warband](https://elderscrollsonline.wiki.fextralife.com/Tzogvin's+Warband+Set)\n[Mighty Glacier](https://elderscrollsonline.wiki.fextralife.com/Mighty+Glacier+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Frostvault",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/frostvault-1.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Frostvault)",
+      "requirements": "CP160"
+    },
+
+    "LoM": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Lair of Maarselok",
+      "description": "Here you can farm:\n[Maarselok's Visage](https://elderscrollsonline.wiki.fextralife.com/Maarselok's+Visage+Set)\n[Z'en's Redress](https://elderscrollsonline.wiki.fextralife.com/Z'en's+Redress+Set)\n[Azureblight Reaper](https://elderscrollsonline.wiki.fextralife.com/Azureblight+Reaper+Set)\n[Dragon's Defilement](https://elderscrollsonline.wiki.fextralife.com/Dragon's+Defilement+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Lair_of_Maarselok",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/lair-of-maarselok-art-eso-wiki.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Lair+of+Maarselok)",
+      "requirements": "CP160"
+    },
+
+    "MgF": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Moongrave Fane",
+      "description": "Here you can farm:\n[Grundwulf(https://elderscrollsonline.wiki.fextralife.com/Grundwulf+Set)\n[Hollowfang Thirst](https://elderscrollsonline.wiki.fextralife.com/Hollowfang+Thirst+Set)\n[Dro'Zakar's Claw](https://elderscrollsonline.wiki.fextralife.com/Dro'Zakar's+Claw+Set)\n[Renald's Resolve](https://elderscrollsonline.wiki.fextralife.com/Renald's+Resolve+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Moongrave_Fane",
+      "image": "https://elderscrollsonline.wiki.fextralife.com/file/Elder-Scrolls-Online/moongravefane.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Moongrave+Fane)",
+      "requirements": "CP160"
+    },
+
+    "Ir": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Icereach",
+      "description": "Here you can farm:\n[Mother Ciannait](https://elderscrollsonline.wiki.fextralife.com/Mother+Ciannait)\n[Hiti's Hearth](https://elderscrollsonline.wiki.fextralife.com/Hiti's+Hearth+Set)\n[Titanborn Strength](https://elderscrollsonline.wiki.fextralife.com/Titanborn+Strength+Set)\n[Bani's Torment](https://elderscrollsonline.wiki.fextralife.com/Bani's+Torment+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Icereach",
+      "image": "https://images.uesp.net/thumb/5/59/ON-place-Icereach_Courtyard.jpg/800px-ON-place-Icereach_Courtyard.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Icereach)",
+      "requirements": "CP160"
+    },
+
+    "UG": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Unhallowed Grave",
+      "description": "Here you can farm:\n[Kjalnar's Nightmare](https://elderscrollsonline.wiki.fextralife.com/Kjalnar's+Nightmare+Set)\n[Draugrkin's Grip](https://elderscrollsonline.wiki.fextralife.com/Draugrkin's+Grip+Set)\n[Aegis Caller](https://elderscrollsonline.wiki.fextralife.com/Aegis+Caller+Set)\n[Grave Guardian](https://elderscrollsonline.wiki.fextralife.com/Grave+Guardian+Set)",
+      "url": "https://en.uesp.net/wiki/Online:Unhallowed_Grave",
+      "image": "https://images.uesp.net/thumb/3/3a/ON-place-Unhallowed_Grave.jpg/800px-ON-place-Unhallowed_Grave.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Unhallowed+Grave)",
+      "requirements": "CP160"
+    },
+
+    "CT": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Castle Thorn",
+      "description": "Here you can farm:\n[Lady Thorn](https://elderscrollsonline.wiki.fextralife.com/Lady+Thorn)\n[Talfyg's Treachery](https://elderscrollsonline.wiki.fextralife.com/Talfyg's+Treachery)\n[Unleached Terror](https://elderscrollsonline.wiki.fextralife.com/Unleashed+Terror)\n[Crimson Twilight](https://elderscrollsonline.wiki.fextralife.com/Crimson+Twilight)",
+      "url": "https://en.uesp.net/wiki/Online:Castle_Thorn",
+      "image": "https://images.uesp.net/thumb/c/c9/ON-place-Castle_Thorn.jpg/800px-ON-place-Castle_Thorn.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Castle+Thorn)",
+      "requirements": "CP160"
+    },
+
+    "SG": {
+      "dps0": {
+          "name": "DPS",
+          "amount": 2
+      },
+      "healer0": {
+          "name": "Healer",
+          "amount": 1
+      },
+      "tank0": {
+          "name": "Main Tank",
+          "amount": 1
+      },
+      "title": "Stone Garden",
+      "description": "Here you can farm:\n[Stone Husk](https://elderscrollsonline.wiki.fextralife.com/Stone+Husk)\n[Elemental Catalyst](https://elderscrollsonline.wiki.fextralife.com/Elemental+Catalyst)\n[Kraglen's Howl](https://elderscrollsonline.wiki.fextralife.com/Kraglen's+Howl)\n[Arkasis's Genius](https://elderscrollsonline.wiki.fextralife.com/Arkasis's+Genius)",
+      "url": "https://en.uesp.net/wiki/Online:Stone_Garden",
+      "image": "https://images.uesp.net/thumb/3/31/ON-place-Stone_Garden.jpg/800px-ON-place-Stone_Garden.jpg",
+      "guides": "[Fextralife Guide](https://elderscrollsonline.wiki.fextralife.com/Stone+Garden)",
       "requirements": "CP160"
     }
 }
