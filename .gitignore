@@ -139,6 +139,7 @@ cython_debug/
 
 # Config and Data files
 config.py
+tests.json
 *.db
 *.db-journal
 *.tar
