@@ -8,18 +8,24 @@ from discord.ext import menus
 
 
 ALL_ROLES = [f"{role}{i}" for role, i in
-             itertools.product(["dps", "healer", "tank"], range(2))]
+             itertools.product(["dps", "healer", "tank"], range(4))]
 
 BUTTONS = {
-    "dps0": "\U0001f5e1\ufe0f",  # :dagger:
-    "dps1": "\u2694\ufe0f",  # :crossed_swords:
-    "healer0": "\U0001f3e5",  # :hospital:
-    "healer1": "\u2695\ufe0f",  # :medical_symbol:
-    "tank0": "\U0001f6e1\ufe0f",  # :shield:
-    "tank1": "\U0001f9a7",  # :orangutan:
-    "leader": "\U0001f451",  # :crown:
-    "fill": "\U0001f4ad",  # :thought_balloon:
-    "clear": "\u274c",  # :x:
+    "dps0": "<:dps0:818209538846621726>",
+    "dps1": "<:dps1:818210522851704852>",
+    "dps2": "<:dps2:818196727118168084>",
+    "dps3": "<:dps3:818196726895869952>",
+    "healer0": "<:healer0:818213228978634784>",
+    "healer1": "<:healer1:818196727302455306>",
+    "healer2": "<:healer2:818196727148052500>",
+    "healer3": "<:healer3:818208818231246869>",
+    "tank0": "<:tank0:818214243194241036>",
+    "tank1": "<:tank1:818199098997473340>",
+    "tank2": "<:tank2:773377781513977926>",
+    "tank3": "<:tank3:773377679160246282>",
+    "leader": "\N{CROWN}",
+    "fill": "\N{THOUGHT BALLOON}",  # :thought_balloon:
+    "clear": "\N{CROSS MARK}",  # :x:
 }
 REVERSE_BUTTONS = {v: k for k, v in BUTTONS.items()}
 
