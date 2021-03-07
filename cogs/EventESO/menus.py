@@ -24,8 +24,8 @@ BUTTONS = {
     "tank2": "<:tank2:773377781513977926>",
     "tank3": "<:tank3:773377679160246282>",
     "leader": "\N{CROWN}",
-    "fill": "\N{THOUGHT BALLOON}",  # :thought_balloon:
-    "clear": "\N{CROSS MARK}",  # :x:
+    "fill": "\N{THOUGHT BALLOON}",
+    "clear": "\N{CROSS MARK}",
 }
 REVERSE_BUTTONS = {v: k for k, v in BUTTONS.items()}
 
