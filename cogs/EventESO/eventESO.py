@@ -115,6 +115,8 @@ class EventESO(commands.Cog):
             trigger_at,
         )
 
+    @arena.error
+    @dungeon.error
     @trial.error
     async def base_event_error(self, ctx, error):
         """Error handler for the event commands."""
@@ -144,7 +146,8 @@ class EventESO(commands.Cog):
         event_data = self._get_event_type_data(event_type)
 
         if event_name not in event_data.keys():
-            raise EventAbbreviationError(f"Unknown trial `{event_name}`.")
+            raise EventAbbreviationError(
+                f"Unknown {ctx.invoked_with} `{event_name}`.")
 
         event_id = await self._create_event(
             event_type,
