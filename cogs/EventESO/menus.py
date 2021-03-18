@@ -45,10 +45,7 @@ class RegistrationMenu(menus.Menu):
 
     def __init__(self, *args, **kwargs):
         event_data = kwargs.pop('event_data')
-        self.trigger_at = event_data['trigger_at']
-        self.event_id = event_data['event_id']
-        self.event_name = event_data['event_name']
-        self.event_type = event_data['event_type']
+        self.load_data(event_data)
 
         if self.event_type == "arena":
             self.template = {**BASE_DICT, **ARENAS_DATA[self.event_name]}
@@ -73,6 +70,12 @@ class RegistrationMenu(menus.Menu):
                 skip_if=self._skip_role(role)
             )
             self.add_button(button)
+
+    def load_data(self, event_data):
+        self.trigger_at = event_data['trigger_at']
+        self.event_id = event_data['event_id']
+        self.event_name = event_data['event_name']
+        self.event_type = event_data['event_type']
 
     async def send_initial_message(self, ctx, channel):
         """Send the initial, empty Embed for the registration."""
