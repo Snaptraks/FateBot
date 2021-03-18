@@ -47,19 +47,6 @@ class RegistrationMenu(menus.Menu):
         event_data = kwargs.pop('event_data')
         self.load_data(event_data)
 
-        if self.event_type == "arena":
-            self.template = {**BASE_DICT, **ARENAS_DATA[self.event_name]}
-
-        elif self.event_type == "dungeon":
-            self.template = {**BASE_DICT, **DUNGEONS_DATA[self.event_name]}
-
-        elif self.event_type == "trial":
-            self.template = {**BASE_DICT, **TRIALS_DATA[self.event_name]}
-            # in py 3.9:
-            # self.template = BASE_DICT | TRIALS_DATA[self.event_name]
-        else:
-            raise ValueError
-
         super().__init__(*args, **kwargs)
 
         # add the buttons upon instanciation
@@ -76,6 +63,19 @@ class RegistrationMenu(menus.Menu):
         self.event_id = event_data['event_id']
         self.event_name = event_data['event_name']
         self.event_type = event_data['event_type']
+
+        if self.event_type == "arena":
+            self.template = {**BASE_DICT, **ARENAS_DATA[self.event_name]}
+
+        elif self.event_type == "dungeon":
+            self.template = {**BASE_DICT, **DUNGEONS_DATA[self.event_name]}
+
+        elif self.event_type == "trial":
+            self.template = {**BASE_DICT, **TRIALS_DATA[self.event_name]}
+            # in py 3.9:
+            # self.template = BASE_DICT | TRIALS_DATA[self.event_name]
+        else:
+            raise ValueError
 
     async def send_initial_message(self, ctx, channel):
         """Send the initial, empty Embed for the registration."""
