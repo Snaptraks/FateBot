@@ -408,7 +408,7 @@ class EventESO(commands.Cog):
 
         async with self.bot.db.execute(
                 """
-                SELECT rowID AS event_id, *
+                SELECT rowid AS event_id, *
                   FROM eventeso_event
                  WHERE rowid = :event_id
                 """,
