@@ -62,7 +62,7 @@ class RegistrationMenu(menus.Menu):
 
         super().__init__(*args, **kwargs)
 
-        # add the buttonsupon instanciation
+        # add the buttons upon instanciation
         for role in ALL_ROLES:
             button = menus.Button(
                 BUTTONS[role],
