@@ -39,6 +39,8 @@ with open(os.path.join(template_path, "dungeons.json")) as f:
 with open(os.path.join(template_path, "trials.json")) as f:
     TRIALS_DATA = json.load(f)
 
+EMBED_COLOR = 0x200972
+
 
 class RegistrationMenu(menus.Menu):
     """Menu for the role selection in an Event."""
@@ -198,7 +200,7 @@ class RegistrationMenu(menus.Menu):
             title=self.template['title'],
             description=self.template['description'],
             url=self.template['url'],
-            color=0x200972,
+            color=EMBED_COLOR,
         ).set_author(
             name=self.bot.user.name,
             icon_url=self.bot.user.avatar_url,
@@ -350,3 +352,47 @@ class RegistrationMenu(menus.Menu):
         )
 
         await self.bot.db.commit()
+
+
+class EditMenu(menus.Menu):
+    """Menu to edit the data of an Event."""
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.result = None
+
+    async def send_initial_message(self, ctx, channel):
+
+        description = "\n".join([
+            f"{emoji}: `{button.action.__name__.replace('on_', '')}`"
+            for emoji, button in self.buttons.items()
+        ])
+
+        embed = discord.Embed(
+            title="What do you want to edit?",
+            description=description,
+            color=EMBED_COLOR,
+        )
+        return await ctx.send(embed=embed)
+
+    # trigger_at
+    @menus.button("\N{MANTELPIECE CLOCK}")
+    async def on_trigger_at(self, payload):
+        self.result = "trigger_at"
+        self.stop()
+
+    # event_type
+    # @menus.button("\N{BAR CHART}")
+    # async def on_event_type(self, payload):
+    #     self.result = "event_type"
+    #     self.stop()
+
+    # event_name
+    @menus.button("\N{NAME BADGE}")
+    async def on_event_name(self, payload):
+        self.result = "event_name"
+        self.stop()
+
+    async def prompt(self, ctx):
+        await self.start(ctx, wait=True)
+        return self.result
