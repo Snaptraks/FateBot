@@ -196,6 +196,66 @@ class EventESO(commands.Cog):
 
         await self.fake_button_press(menu, member, button)
 
+    @event.command(name="edit")
+    async def event_edit(self, ctx, event_id: int):
+        """Administrator command to edit an event."""
+
+        if event_id not in self.running_events.keys():
+            raise EventIDNotRunning(f"No event running at ID `{event_id}`.")
+
+        event_data = await self._get_event_data(event_id)
+
+        menu = menus.EditMenu(
+            clear_reactions_after=True,
+            delete_message_after=True,
+        )
+        to_edit = await menu.prompt(ctx)
+
+        question_message = await ctx.send("What should be the new value?")
+
+        def check(message):
+            return (message.channel == question_message.channel
+                    and message.author == ctx.author)
+
+        answer_message = await self.bot.wait_for("message", check=check)
+
+        # check for conversions
+        if to_edit == "trigger_at":
+            new_value = await DateTimeISO().convert(ctx, answer_message.content)
+
+        elif to_edit == "event_type":
+            # SHOULD NOT BE USED. You should create a new event instead
+            new_value = answer_message.content
+            if new_value not in ("trial", "arena", "dungeon"):
+                raise ValueError
+
+        elif to_edit == "event_name":
+            new_value = answer_message.content
+            event_type_data = self._get_event_type_data(
+                event_data["event_type"])
+
+            if new_value not in event_type_data.keys():
+                raise EventAbbreviationError(
+                    f"Unknown {event_data['event_type']} `{new_value}`.")
+
+        await self._edit_event(event_id, to_edit, new_value)
+
+        # cancel the event and restart the menu
+        await self._cancel_event(event_id)
+        event_data = await self._get_event_data(event_id)
+        channel = (self.bot.get_channel(event_data['channel_id'])
+                   or await self.bot.fetch_channel(event_data['channel_id']))
+        menu_message = await channel.fetch_message(event_data['message_id'])
+        menu_ctx = await self.bot.get_context(menu_message)
+        await self._start_event(menu_ctx, event_id, menu_message, event_data)
+
+        # delete the remaining editing messages
+        await ctx.channel.delete_messages(
+            [question_message, answer_message, ctx.message])
+        await ctx.send(f"Successfully edited Event ID {event_id}!",
+                       delete_after=10)
+        await self.running_events[event_id]["menu"].update_page()
+
     @event.error
     @event_cancel.error
     @event_add.error
@@ -411,6 +471,23 @@ class EventESO(commands.Cog):
         await self.bot.db.commit()
 
         return event_id
+
+    async def _edit_event(self, event_id, to_edit, new_value):
+        """Edit an entry for an event in the DB."""
+
+        await self.bot.db.execute(
+            f"""
+            UPDATE eventeso_event
+               SET {to_edit} = :new_value
+             WHERE rowid = :event_id
+            """,
+            {
+                "event_id": event_id,
+                "new_value": new_value,
+            }
+        )
+
+        await self.bot.db.commit()
 
     async def _get_event_data(self, event_id):
         """Get the data on the event from the DB and cache it."""
