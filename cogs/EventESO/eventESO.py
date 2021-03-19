@@ -66,14 +66,7 @@ class EventESO(commands.Cog):
             ctx = await self.bot.get_context(message)
 
             id = event['event_id']
-            self.running_events[id]['task'] = self.bot.loop.create_task(
-                self._registration_task(
-                    ctx,
-                    event_data=dict(event),
-                    message=message,
-                    timeout=None,
-                )
-            )
+            await self._start_event(ctx, id, message, event)
 
     @reload_menus.before_loop
     async def reload_menus_before(self):
@@ -154,16 +147,8 @@ class EventESO(commands.Cog):
             event_name,
             trigger_at,
         )
-        event_data = dict(await self._get_event_data(event_id))
 
-        id = event_data['event_id']
-        self.running_events[id]['task'] = self.bot.loop.create_task(
-            self._registration_task(
-                ctx,
-                event_data=event_data,
-                timeout=None,
-            )
-        )
+        await self._start_event(ctx, event_id)
 
     @commands.group(aliases=["events"])
     @commands.has_any_role(*ADMIN_ROLES)
@@ -177,15 +162,7 @@ class EventESO(commands.Cog):
         if event_id not in self.running_events.keys():
             raise EventIDNotRunning(f"No event running at ID `{event_id}`.")
 
-        event_data = await self._get_event_data(event_id)
-        channel = self.bot.get_channel(event_data['channel_id'])
-        message = await channel.fetch_message(event_data['message_id'])
-
-        await self.running_events[event_id]['menu'].stop()
-        self.running_events[event_id]['task'].cancel()
-        await message.delete()
-        del self.running_events[event_id]
-        await self._stop_event(event_id)
+        await self._cancel_event(event_id, stop_event=True, delete_message=True)
 
     @event.command(name="add")
     async def event_add(self, ctx, event_id: int, role: str,
@@ -339,6 +316,40 @@ class EventESO(commands.Cog):
         )
         del self.running_events[event_id]
         await self._stop_event(event_id)
+
+    async def _start_event(self, ctx, event_id, message=None, event_data=None):
+        """Helper function to start an event."""
+
+        if event_data is None:
+            event_data = await self._get_event_data(event_id)
+
+        id = event_data['event_id']
+        self.running_events[id]['task'] = self.bot.loop.create_task(
+            self._registration_task(
+                ctx,
+                event_data=event_data,
+                timeout=None,
+                message=message,
+                clear_reactions_after=True,
+            )
+        )
+
+    async def _cancel_event(self, event_id, stop_event=False,
+                            delete_message=False):
+        """Helper function to cancel an event."""
+
+        event_data = await self._get_event_data(event_id)
+        channel = self.bot.get_channel(event_data['channel_id'])
+        message = await channel.fetch_message(event_data['message_id'])
+
+        await self.running_events[event_id]['menu'].stop()
+        self.running_events[event_id]['task'].cancel()
+        del self.running_events[event_id]
+        if stop_event:
+            await self._stop_event(event_id)
+
+        if delete_message:
+            await message.delete()
 
     @tasks.loop(count=1)
     async def _create_tables(self):
