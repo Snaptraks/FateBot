@@ -171,14 +171,13 @@ class EventESO(commands.Cog):
         Must specify the event ID and desired role of the member.
         """
 
-        try:
-            menu = self.running_events[event_id]['menu']
-        except KeyError:
+        if event_id not in self.running_events.keys():
             raise EventIDNotRunning(f"No event running at ID `{event_id}`.")
 
         if role not in menus.ALL_ROLES:
             raise EventRoleNotFound(f"Role {role} is not valid.")
 
+        menu = self.running_events[event_id]['menu']
         button = menus.BUTTONS[role]
 
         await self.fake_button_press(menu, member, button)
@@ -189,11 +188,10 @@ class EventESO(commands.Cog):
         Must specify the event ID.
         """
 
-        try:
-            menu = self.running_events[event_id]['menu']
-        except KeyError:
+        if event_id not in self.running_events.keys():
             raise EventIDNotRunning(f"No event running at ID `{event_id}`.")
 
+        menu = self.running_events[event_id]['menu']
         button = menus.BUTTONS['clear']
 
         await self.fake_button_press(menu, member, button)
