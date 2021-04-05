@@ -1,4 +1,4 @@
-aiosqlite==0.16.0
+aiosqlite==0.17.0
 discord.py==1.6.0
 python-dateutil
 git+git://github.com/Rapptz/discord-ext-menus.git
