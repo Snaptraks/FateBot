@@ -67,17 +67,17 @@ class RegistrationMenu(menus.Menu):
         self.event_type = event_data['event_type']
 
         if self.event_type == "arena":
-            self.template = {**BASE_DICT, **ARENAS_DATA[self.event_name]}
+            template = ARENAS_DATA[self.event_name]
 
         elif self.event_type == "dungeon":
-            self.template = {**BASE_DICT, **DUNGEONS_DATA[self.event_name]}
+            template = DUNGEONS_DATA[self.event_name]
 
         elif self.event_type == "trial":
-            self.template = {**BASE_DICT, **TRIALS_DATA[self.event_name]}
-            # in py 3.9:
-            # self.template = BASE_DICT | TRIALS_DATA[self.event_name]
+            template = TRIALS_DATA[self.event_name]
         else:
             raise ValueError
+
+        self.template = BASE_DICT | template
 
     async def send_initial_message(self, ctx, channel):
         """Send the initial, empty Embed for the registration."""
